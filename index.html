@@ -163,7 +163,7 @@ footer{background:var(--forest-dark);color:#c5d5cd;padding:32px 0;font-size:12px
 <section class="status-rail" id="avance" aria-labelledby="progressTitle"><div class="wrap"><div class="rail-card">
 <div class="rail-head"><div><span class="label">TRANSPARENCIA · DATOS EN LÍNEA</span><h2 id="progressTitle">Así avanza TODO VUELVE.</h2></div><span class="synced" id="syncBadge">Conectando…</span></div>
 <div class="progress-line"><strong id="progressText">Consultando números…</strong><span id="progressPercent">—</span></div>
-<div class="track" role="progressbar" aria-label="Números registrados como asignados o bloqueados" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0" id="progressTrack"><div class="fill" id="progressFill"></div></div>
+<div class="track" role="progressbar" aria-label="Avance de números asignados o bloqueados" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0" id="progressTrack"><div class="fill" id="progressFill"></div></div>
 <div class="progress-meta"><span><b id="freeCount">—</b> sin asignar</span><span><b id="reservedCount">—</b> reservados</span><span><b id="paidCount">—</b> pagados</span><a href="numeros.html" style="font-weight:800;color:var(--forest)">Ver detalle ↗</a></div>
 <p class="rail-hint">Esta barra muestra el estado de los <b>300 números</b> en Supabase. No representa dinero recaudado ni aportes voluntarios. Los números sin asignar no están a la venta mientras la edición siga cerrada.</p>
 </div></div></section>
@@ -262,7 +262,7 @@ async function updateProgress(){
   const reserved=data.filter(x=>x.estado==="reservado").length;
   const paid=data.filter(x=>x.estado==="pagado").length;
   const occupied=300-free;const pct=Math.round(occupied/300*100);
-  progress.textContent=occupied+" de 300 números registrados";
+  progress.textContent=occupied+" de 300 números asignados";
   percent.textContent=pct+"%";
   fill.style.width=(occupied/300*100)+"%";
   track.setAttribute("aria-valuenow",String(occupied));
