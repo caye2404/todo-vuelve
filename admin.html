@@ -36,6 +36,19 @@ dialog{background:var(--panel);color:var(--fg);border:1px solid var(--gold);padd
  </form>
  <div id="loginMessage" class="message" role="status"></div></details>
 </section>
+<section id="resetPanel" class="box" hidden style="max-width:490px;margin:55px auto">
+ <div class="eyebrow">Recuperación de acceso</div>
+ <h1>Elegí una contraseña nueva</h1>
+ <p>El correo de recuperación ya verificó tu identidad. Elegí una contraseña solo para el usuario de la aplicación TODO VUELVE.</p>
+ <form id="resetPasswordForm">
+  <label for="newPassword">Nueva contraseña (12 caracteres como mínimo)</label>
+  <input id="newPassword" type="password" minlength="12" autocomplete="new-password" required>
+  <label for="confirmPassword">Repetir contraseña</label>
+  <input id="confirmPassword" type="password" minlength="12" autocomplete="new-password" required>
+  <button id="resetPasswordButton" type="submit" style="width:100%;margin-top:20px">Guardar contraseña y entrar</button>
+ </form>
+ <div id="resetPasswordStatus" class="message" role="status"></div>
+</section>
 <section id="dashboard" hidden>
  <div class="top"><div><div class="eyebrow">Administración · Edición 2026</div><h1 style="margin:10px 0">Control de números</h1><p>Registro privado de participantes y comprobantes. Ningún dato personal se publica.</p></div>
  <div class="actions"><button id="refreshBtn" class="secondary">Actualizar</button><button id="exportBtn" class="secondary">Descargar respaldo</button><button id="snapshotBtn" class="secondary">Crear copia interna</button><button id="logoutBtn" class="secondary">Salir</button></div></div>
