@@ -34,12 +34,33 @@ async function rpc(name,args={}){
  return json;
 }
 function showLogin(message=''){
- $('dashboard').hidden=true;$('loginPanel').hidden=false;
+ $('dashboard').hidden=true;$('resetPanel').hidden=true;$('loginPanel').hidden=false;
  if(message)say('loginMessage',message,true);
 }
 function showDashboard(){
- $('loginPanel').hidden=true;$('dashboard').hidden=false;
+ $('loginPanel').hidden=true;$('resetPanel').hidden=true;$('dashboard').hidden=false;
  $('password').value='';
+}
+function showResetPanel(){
+ $('loginPanel').hidden=true;$('dashboard').hidden=true;$('resetPanel').hidden=false;
+ say('resetPasswordStatus','Ingresá y repetí una contraseña nueva.');
+}
+async function updateRecoveredPassword(event){
+ event.preventDefault();
+ const pass=$('newPassword').value,confirmPass=$('confirmPassword').value;
+ if(pass!==confirmPass){say('resetPasswordStatus','Las contraseñas no coinciden.',true);return}
+ if(pass.length<12){say('resetPasswordStatus','Elegí al menos 12 caracteres.',true);return}
+ const button=$('resetPasswordButton');button.disabled=true;
+ say('resetPasswordStatus','Guardando la contraseña nueva…');
+ try {
+  const jwt=await ensureToken();
+  const result=await fetch(BASE+'/auth/v1/user',{method:'PUT',headers:{apikey:KEY,Authorization:'Bearer '+jwt,'Content-Type':'application/json'},body:JSON.stringify({password:pass})});
+  const data=await result.json().catch(()=>({}));
+  if(!result.ok)throw Error(data.msg||data.message||data.error_description||'No fue posible cambiar la contraseña');
+  $('newPassword').value='';$('confirmPassword').value='';
+  await load();
+ }catch(err){say('resetPasswordStatus',err.message||'No se pudo completar el cambio.',true)}
+ finally{button.disabled=false}
 }
 async function load(){
  const result=await rpc('tv_admin_list');
@@ -155,11 +176,13 @@ async function recoverEmailLogin(){
  };
  history.replaceState(null,'',location.pathname);
  sessionSave(data);
+ if(fragment.get('type')==='recovery'){showResetPanel();return true}
  try{await load()}
  catch(err){sessionClear();showLogin(err.message||'Tu correo fue verificado, pero no estás autorizado para entrar.')}
  return true;
 }
 $('emailLinkForm').addEventListener('submit',requestEmailLink);
+$('resetPasswordForm').addEventListener('submit',updateRecoveredPassword);
 
 $('loginForm').addEventListener('submit',handleLogin);
 $('editForm').addEventListener('submit',saveEdit);
