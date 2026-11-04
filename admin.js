@@ -148,8 +148,9 @@ async function requestEmailLink(ev){
  const button=$('emailLinkButton'),status=$('emailLinkStatus'),address=$('emailLinkAddress').value.trim();
  button.disabled=true;say('emailLinkStatus','Enviando enlace de ingreso…');
  try {
-  const redirect=location.origin+location.pathname;
-  const response=await fetch(BASE+'/auth/v1/otp?redirect_to='+encodeURIComponent(redirect),{
+  // Use the configured Site URL as the redirect, which is currently the
+  // dedicated Supabase redirector to this panel. Do not require a new allowlist entry.
+  const response=await fetch(BASE+'/auth/v1/otp',{
    method:'POST',
    headers:{apikey:KEY,'Content-Type':'application/json'},
    body:JSON.stringify({email:address,create_user:false})
