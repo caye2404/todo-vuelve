@@ -122,6 +122,45 @@ function exportBackup(){
 function logout(){
  sessionClear();records=[];$('rows').replaceChildren();$('password').value='';showLogin();say('loginMessage','Sesión cerrada.');
 }
+async function requestEmailLink(ev){
+ ev.preventDefault();
+ const button=$('emailLinkButton'),status=$('emailLinkStatus'),address=$('emailLinkAddress').value.trim();
+ button.disabled=true;say('emailLinkStatus','Enviando enlace de ingreso…');
+ try {
+  const redirect=location.origin+location.pathname;
+  const response=await fetch(BASE+'/auth/v1/otp?redirect_to='+encodeURIComponent(redirect),{
+   method:'POST',
+   headers:{apikey:KEY,'Content-Type':'application/json'},
+   body:JSON.stringify({email:address,create_user:false})
+  });
+  const result=await response.json().catch(()=>({}));
+  if(!response.ok)throw Error(result.msg||result.message||result.error_description||'No se pudo enviar el correo');
+  say('emailLinkStatus','Si el correo corresponde a un usuario registrado, vas a recibir un enlace. Revisá también spam. Abrilo desde este mismo navegador.');
+ } catch(err) {say('emailLinkStatus',err.message||'No se pudo enviar el enlace.',true)}
+ finally {button.disabled=false}
+}
+async function recoverEmailLogin(){
+ const fragment=new URLSearchParams(location.hash.replace(/^#/,''));
+ if(fragment.has('error')){
+  const message=fragment.get('error_description')||'El enlace venció o no pudo validarse.';
+  history.replaceState(null,'',location.pathname);
+  showLogin(message);
+  return true;
+ }
+ if(!fragment.has('access_token')||!fragment.has('refresh_token'))return false;
+ const data={
+  access_token:fragment.get('access_token'),
+  refresh_token:fragment.get('refresh_token'),
+  expires_in:Number(fragment.get('expires_in')||3600)
+ };
+ history.replaceState(null,'',location.pathname);
+ sessionSave(data);
+ try{await load()}
+ catch(err){sessionClear();showLogin(err.message||'Tu correo fue verificado, pero no estás autorizado para entrar.')}
+ return true;
+}
+$('emailLinkForm').addEventListener('submit',requestEmailLink);
+
 $('loginForm').addEventListener('submit',handleLogin);
 $('editForm').addEventListener('submit',saveEdit);
 $('filter').addEventListener('change',render);
@@ -132,4 +171,4 @@ $('logoutBtn').addEventListener('click',logout);
 $('exportBtn').addEventListener('click',exportBackup);
 $('snapshotBtn').addEventListener('click',createInternalSnapshot);
 $('refreshBtn').addEventListener('click',async()=>{try{await load()}catch(err){say('panelMessage',err.message,true)}});
-try{const stored=sessionStorage.getItem(STORAGE);if(stored){session=JSON.parse(stored);load().catch(e=>{logout();showLogin(e.message)})}}catch{sessionClear()}
+recoverEmailLogin().then(handled=>{if(!handled){try{const stored=sessionStorage.getItem(STORAGE);if(stored){session=JSON.parse(stored);load().catch(e=>{logout();showLogin(e.message)})}}catch{sessionClear()}}}).catch(e=>showLogin(e.message||'Error de ingreso por correo'));
