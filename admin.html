@@ -37,13 +37,13 @@ dialog{background:var(--panel);color:var(--fg);border:1px solid var(--gold);padd
 </section>
 <section id="dashboard" hidden>
  <div class="top"><div><div class="eyebrow">Administración · Edición 2026</div><h1 style="margin:10px 0">Control de números</h1><p>Registro privado de participantes y comprobantes. Ningún dato personal se publica.</p></div>
- <div class="actions"><button id="refreshBtn" class="secondary">Actualizar</button><button id="exportBtn" class="secondary">Exportar respaldo</button><button id="logoutBtn" class="secondary">Salir</button></div></div>
+ <div class="actions"><button id="refreshBtn" class="secondary">Actualizar</button><button id="exportBtn" class="secondary">Descargar respaldo</button><button id="snapshotBtn" class="secondary">Crear copia interna</button><button id="logoutBtn" class="secondary">Salir</button></div></div>
  <div class="notice">Las ventas públicas están cerradas. Este panel permite registrar datos manualmente para administración interna; no procesa pagos ni autoriza nuevas ventas.</div>
  <div class="stats" aria-label="Resumen"><div class="stat"><b id="total">–</b><span>Total</span></div><div class="stat"><b id="free">–</b><span>Sin asignar</span></div><div class="stat"><b id="reserved">–</b><span>Reservados</span></div><div class="stat"><b id="paid">–</b><span>Pagados</span></div></div>
  <div class="filters"><div><label for="search">Buscar número, nombre o contacto</label><input id="search" type="search" placeholder="Ej.: 024, nombre o teléfono"></div><div><label for="filter">Estado</label><select id="filter"><option value="todos">Todos</option><option value="disponible">Sin asignar</option><option value="reservado">Reservados</option><option value="pagado">Pagados</option><option value="anulado">Anulados</option></select></div></div>
  <div id="panelMessage" class="message" role="status"></div>
  <div class="table-wrap"><table><thead><tr><th>Número</th><th>Estado</th><th>Nombre</th><th>Contacto</th><th>Último cambio</th><th>Acción</th></tr></thead><tbody id="rows"></tbody></table></div>
- <p class="hint">Respaldo: el botón «Exportar respaldo» descarga un JSON privado a tu dispositivo. Guardalo en un lugar seguro.</p>
+ <p class="hint">Protección de datos: cada cambio conserva su versión anterior en la base. «Crear copia interna» guarda una fotografía adicional en Supabase. «Descargar respaldo» te permite conservar una copia fuera del sistema: guardala de manera segura y no la compartas públicamente.</p>
 </section>
 </main>
 <dialog id="editor"><div class="dialog-body"><div class="dialog-head"><h2 id="editTitle">Editar número</h2><button id="closeEditor" class="secondary" type="button" aria-label="Cerrar">✕</button></div>
