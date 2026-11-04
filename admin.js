@@ -104,6 +104,14 @@ async function saveEdit(e){
  }catch(err){say('editMessage',err.message||'No se pudo guardar.',true)}
  finally{b.disabled=false}
 }
+async function createInternalSnapshot(){
+ const btn=$('snapshotBtn');btn.disabled=true;say('panelMessage','Creando copia interna de los 300 números…');
+ try{
+  const data=await rpc('tv_admin_crear_copia');
+  say('panelMessage','Copia interna #'+data.id+' guardada en Supabase · '+data.registros+' números · '+new Date(data.creado_en).toLocaleString('es-AR')+'. Descargá también un respaldo para guardarlo fuera de la plataforma.');
+ }catch(err){say('panelMessage',err.message||'No se pudo crear la copia interna.',true)}
+ finally{btn.disabled=false}
+}
 function exportBackup(){
  if(!records.length)return;
  const json=JSON.stringify({nombre:'TODO VUELVE',exportado_en:new Date().toISOString(),participantes:records},null,2);
@@ -122,5 +130,6 @@ $('closeEditor').addEventListener('click',()=>$('editor').close());
 $('cancelEdit').addEventListener('click',()=>$('editor').close());
 $('logoutBtn').addEventListener('click',logout);
 $('exportBtn').addEventListener('click',exportBackup);
+$('snapshotBtn').addEventListener('click',createInternalSnapshot);
 $('refreshBtn').addEventListener('click',async()=>{try{await load()}catch(err){say('panelMessage',err.message,true)}});
 try{const stored=sessionStorage.getItem(STORAGE);if(stored){session=JSON.parse(stored);load().catch(e=>{logout();showLogin(e.message)})}}catch{sessionClear()}
