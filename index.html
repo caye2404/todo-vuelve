@@ -1,123 +1,330 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TODO VUELVE | Lo bueno regresa</title><meta name="description" content="Una iniciativa de agradecimiento. Un premio de un millón de pesos. Próximamente.">
-<meta property="og:title" content="Todo Vuelve — Una forma de agradecer"><meta property="og:description" content="Una historia de gratitud. Un premio de $1.000.000. Próximamente."><meta property="og:type" content="website"><meta name="theme-color" content="#101c2b"><style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--navy:#101c2b;--navy2:#17283a;--gold:#d6b67b;--cream:#f6f2e9;--muted:#aeb9c3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--cream);font-family:'DM Sans',sans-serif}a{color:inherit}header{max-width:1160px;margin:auto;padding:27px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff22}.brand{font-weight:700;letter-spacing:.22em;font-size:13px}.tag{font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;border:1px solid #d6b67b55;border-radius:30px;padding:10px 14px}.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:80px 24px 110px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#30445a 0%,#172638 43%,#101c2b 75%)}.hero:before{content:"";position:absolute;inset:40px;border:1px solid #d6b67b2c;pointer-events:none}.hero-inner{position:relative;max-width:900px}.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(58px,11vw,135px)/.98 'Playfair Display',serif;letter-spacing:-.055em;margin:22px 0 28px}.hero h1 em{color:var(--gold);font-style:normal}.subtitle{font-size:clamp(17px,2.3vw,23px);color:#d5dce3;line-height:1.6;max-width:660px;margin:0 auto 38px}.prize{font:600 clamp(43px,7vw,78px)/1 'Playfair Display',serif;color:var(--gold);letter-spacing:-.03em}.prize-label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin:14px 0 35px;color:var(--muted)}.button{display:inline-flex;align-items:center;justify-content:center;padding:16px 25px;text-decoration:none;border:1px solid var(--gold);color:var(--gold);font-size:13px;letter-spacing:.07em;font-weight:700;transition:.2s}.button:hover{background:var(--gold);color:var(--navy)}.section{padding:95px 24px;max-width:1000px;margin:auto}.kicker{color:var(--gold);font-size:12px;letter-spacing:.22em;text-transform:uppercase}.section h2{font:500 clamp(35px,5vw,60px)/1.15 'Playfair Display',serif;letter-spacing:-.035em;margin:17px 0 28px}.section p{font-size:17px;line-height:1.85;color:#c5ced7;max-width:750px}.light{background:var(--cream);color:#182637}.light .section p{color:#526070}.light .kicker{color:#866b3c}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d8d0c3;margin-top:45px;border:1px solid #d8d0c3}.stat{background:var(--cream);padding:27px 18px}.stat strong{display:block;font:600 clamp(25px,4vw,42px) 'Playfair Display',serif}.stat span{font-size:12px;color:#65707a;display:block;margin-top:9px}.notice{border-left:2px solid var(--gold);padding:20px 25px;background:#ffffff0b;margin-top:35px}.notice h3{margin:0 0 8px;font-size:16px}.notice p{font-size:14px;margin:0;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;margin:30px 0}.number{background:#ffffff0a;border:1px solid #ffffff1b;border-radius:5px;padding:10px 2px;text-align:center;font-size:12px;color:#8e9ba9}.foot{border-top:1px solid #ffffff24;padding:35px 24px;text-align:center;color:#8f9eab;font-size:12px}.foot a{color:var(--gold)}@media(max-width:650px){header{padding:22px 18px}.tag{font-size:9px}.hero{min-height:75vh;padding:75px 22px}.hero:before{inset:15px}.section{padding:65px 22px}.stats{grid-template-columns:1fr}.grid{grid-template-columns:repeat(6,minmax(0,1fr))}.number{font-size:11px}}
- .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}.step{padding:28px;border:1px solid #d6b67b3a;background:#ffffff08}.step b{color:var(--gold);font:600 30px Georgia,serif}.step h3{margin:15px 0 8px}.step p{font-size:14px;line-height:1.7;margin:0}.faq details{border-bottom:1px solid #ffffff30;padding:21px 0}.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}.faq summary:after{content:"+";color:var(--gold);font-size:22px}.faq details[open] summary:after{content:"−"}.faq p{font-size:15px;margin:14px 0 0}.contact{background:linear-gradient(135deg,#24374c,#111d2c);border:1px solid #d6b67b66;padding:38px;margin-top:35px}.contact .button{margin-top:15px}.small{font-size:13px!important}.nav{display:flex;gap:20px}.nav a{text-decoration:none;color:#cbd2d8;font-size:12px}.nav a:hover{color:var(--gold)}.note{font-size:12px;color:#9ba9b7;margin-top:14px}@media(max-width:650px){.steps{grid-template-columns:1fr}.nav{display:none}.contact{padding:24px}} 
-/* Aportes y CayeLab: secciones independientes de participaciones numeradas */
-.support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:36px 0 22px}
-.support-card{border:1px solid #d6b67b55;background:linear-gradient(150deg,#22374a 0%,#122338 100%);padding:32px;border-radius:15px;min-width:0}
-.support-card h3{font:500 clamp(28px,3vw,36px)/1.12 'Playfair Display',serif;margin:15px 0 12px}
-.support-card p{font-size:14px;line-height:1.7;color:#d5dce3;margin:0 0 18px}
-.support-kicker{font-size:10px;letter-spacing:.22em;color:#d6b67b;text-transform:uppercase;font-weight:700}
-.bank-alias{margin:25px 0 4px;font-size:clamp(29px,4vw,39px);letter-spacing:.02em;font-weight:700;word-break:break-word}
-.bank-detail{font-size:13px;color:#b9c5ce;line-height:1.65;margin-bottom:20px}
-.support-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:14px 18px;border:1px solid var(--gold);border-radius:5px;background:var(--gold);color:#101c2b;font-size:13px;letter-spacing:.03em;font-weight:700;text-decoration:none;cursor:pointer;transition:.2s}
-.support-btn:hover,.support-btn:focus-visible{background:#ebd7b1;border-color:#ebd7b1}
-.support-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.paypal-link{background:#f6f2e9;color:#112f64;border-color:#f6f2e9}
-.support-status{display:block;min-height:20px;color:#d6b67b;font-size:12px;margin-top:12px}
-.support-clarity{margin:26px 0;border-left:3px solid var(--gold);padding:18px 22px;background:#ffffff0b;color:#d9e2eb;font-size:14px;line-height:1.75}
-.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:35px}
-.service-card{background:#fff;border:1px solid #e5ddd1;border-radius:12px;padding:30px;color:#1c2a3b;display:flex;flex-direction:column;align-items:flex-start}
-.service-card h3{font:600 clamp(26px,3vw,35px)/1.1 'Playfair Display',serif;margin:10px 0}
-.service-card p{font-size:15px;line-height:1.75;color:#5f6e78;margin:7px 0 22px;flex:1}
-.service-card .service-link{display:inline-block;border-bottom:2px solid #a58149;padding:6px 0;text-decoration:none;color:#21334a;font-weight:700;font-size:13px}
-.service-card .service-tag{font-size:11px;letter-spacing:.14em;color:#987742;text-transform:uppercase}
-@media(max-width:750px){.support-grid,.services-grid{grid-template-columns:1fr}.support-card,.service-card{padding:24px}.support-btn{width:100%}}
-</style></head><body>
-<header><div class="brand">CAYE <span style="color:var(--gold)">✦</span></div><nav class="nav"><a href="#historia">La historia</a><a href="#como-funciona">Cómo será</a><a href="#participacion">Participaciones</a><a href="#preguntas">Preguntas</a><a href="#apoyar">Aportes</a><a href="#servicios">CayeLab</a></nav><div class="tag">Próximamente</div></header>
-<main><section class="hero"><div class="hero-inner"><div class="eyebrow">Una forma de agradecer</div><h1>TODO<br><em>VUELVE.</em></h1><p class="subtitle">Un día estuvieron para mí. Hoy quiero que algo bueno vuelva a alguien más.</p><div class="prize">$1.000.000</div><div class="prize-label">Un premio · Una persona ganadora</div><a class="button" href="#historia">CONOCÉ LA HISTORIA ↓</a></div></section>
-<div class="light"><section class="section" id="historia"><div class="kicker">Mi historia</div><h2>Hay gestos que no se olvidan.</h2><p>Llegué a Villa La Angostura buscando una nueva etapa. Dejé atrás una vida conocida, con sus certezas y sus dificultades, para apostar por un nuevo comienzo.</p><p>No todo fue sencillo. Hubo momentos de incertidumbre, de aprender a adaptarme y de preguntarme si había tomado la decisión correcta.</p><p>Pero también hubo algo que nunca voy a olvidar: personas que estuvieron para mí. Algunas me conocían, otras no. Me acompañaron con mensajes, palabras de aliento y gestos de enorme generosidad.</p><p>Hoy sigo trabajando, construyendo mi camino en la Patagonia y tratando de crecer cada día.</p><p><strong>TODO VUELVE nace de ese agradecimiento.</strong> Porque creo que las cosas buenas que recibimos merecen seguir circulando.</p><div class="stats"><div class="stat"><strong>300</strong><span>Números previstos</span></div><div class="stat"><strong>$5.000</strong><span>Valor previsto por número</span></div><div class="stat"><strong>1</strong><span>Persona ganadora</span></div></div></section></div>
-<section class="section" id="como-funciona"><div class="kicker">Una propuesta simple</div><h2>Una oportunidad.<br>Un ganador.</h2><p>La idea es compartir un premio de un millón de pesos con una sola persona. La nueva edición está en preparación y todavía no acepta participaciones.</p><div class="steps"><article class="step"><b>01</b><h3>300 números</h3><p>Se prevé una edición limitada de 300 números, con identificación individual.</p></article><article class="step"><b>02</b><h3>$5.000 por número</h3><p>Precio previsto para la nueva edición, sujeto a la publicación de las bases definitivas.</p></article><article class="step"><b>03</b><h3>$1.000.000</h3><p>Un único premio para una sola persona ganadora, según las condiciones que se publiquen.</p></article></div><div class="notice"><h3>¿Qué pasa con lo recaudado?</h3><p>Si se vendieran los 300 números, la recaudación bruta sería de $1.500.000: $1.000.000 destinados al premio y $500.000 previstos para gastos personales de instalación en Villa La Angostura, antes de costos, impuestos o comisiones. Esta distribución será informada de forma visible en las bases.</p></div></section><div class="light"><section class="section"><div class="kicker">Mi presente</div><h2>Una nueva etapa en la Patagonia.</h2><p>Hoy mi vida continúa en Villa La Angostura. Trabajo, aprendo y construyo de nuevo, con la convicción de que agradecer también puede convertirse en una acción concreta.</p><p>Esta propuesta no busca contar una historia triste. Busca celebrar a las personas que acompañaron el camino y hacer las cosas bien desde el primer día.</p></section></div><section class="section" id="participacion"><div class="kicker">Transparencia ante todo</div><h2>Primero, cuidar la confianza.</h2><p>Estamos reconstruyendo el registro de las participaciones anteriores antes de habilitar esta nueva etapa. Si participaste en la iniciativa original, escribime por privado con tu número y comprobante para verificarlo.</p><div class="notice"><h3>Participaciones temporalmente cerradas</h3><p>Esta edición está en preparación. La grilla consulta la base de datos. Las ventas siguen cerradas, aunque un número figure libre. Las condiciones definitivas, fecha, mecanismo del sorteo y situación de las participaciones anteriores se comunicarán antes de recibir nuevos pagos.</p></div><div id="db-status" role="status" class="note">Consultando los 300 números…</div><div class="grid" id="numbers" aria-label="Vista ilustrativa de 300 números, no disponibles para compra"></div><div class="contact"><div class="kicker">Edición anterior</div><h2 style="font-size:clamp(27px,4vw,43px)">¿Ya habías participado?</h2><p>Tu participación anterior es importante. Antes de lanzar la nueva edición estamos verificando los registros originales. Escribime por privado, indicando el número que elegiste y, si lo conservás, el comprobante de pago. No compartas datos bancarios ni comprobantes en comentarios públicos.</p><a class="button" href="https://wa.me/5491126830194?text=Hola%20Caye.%20Participe%20en%20el%20sorteo%20anterior%20y%20quiero%20verificar%20mi%20numero." target="_blank" rel="noopener noreferrer">VERIFICAR MI PARTICIPACIÓN POR WHATSAPP ↗</a><div class="note">El mensaje abre una conversación privada; no confirma automáticamente ningún número.</div></div><p class="small">La grilla está conectada a Supabase. Ningún número se encuentra a la venta.</p></section><div class="light"><section class="section"><div class="kicker">Compromiso</div><h2>La confianza se cuida con hechos.</h2><p>Antes de abrir la participación, se publicarán las bases completas: fecha y mecanismo del sorteo, condiciones de elegibilidad, tratamiento de las participaciones anteriores, forma de pago, entrega del premio y procedimiento de verificación.</p><p>También se revisarán los requisitos legales y las autorizaciones que correspondan. Hasta completar ese proceso, esta web será exclusivamente informativa.</p></section></div>
-<section class="section" id="apoyar">
- <div class="kicker">Acompañar también es una manera de estar</div>
- <h2>Si querés apoyar este camino.</h2>
- <p>Esta historia sigue gracias a las personas que se acercaron con un gesto. Si te nace acompañar mi nueva etapa y el desarrollo de mis proyectos, podés hacer un aporte personal voluntario por transferencia o PayPal.</p>
- <div class="support-grid">
-  <article class="support-card">
-   <div class="support-kicker">Argentina · Transferencia bancaria</div>
-   <h3>Transferencia a Galicia</h3>
-   <div class="bank-alias" id="aliasText">caye2400</div>
-   <div class="bank-detail"><strong>Banco Galicia</strong><br>Titular: Cayetano Raúl Benítez</div>
-   <button type="button" class="support-btn" id="copyAlias">Copiar alias <span aria-hidden="true">⧉</span></button>
-   <span id="aliasCopiedStatus" class="support-status" role="status" aria-live="polite"></span>
-  </article>
-  <article class="support-card">
-   <div class="support-kicker">Desde Argentina o el exterior</div>
-   <h3>Apoyar con PayPal</h3>
-   <p>Si te resulta más cómodo utilizar PayPal, podés realizar un aporte voluntario desde mi perfil personal verificado.</p>
-   <a class="support-btn paypal-link" href="https://paypal.me/caye2404" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de Cayetano Benítez en PayPal.Me">Abrir PayPal <span aria-hidden="true">↗</span></a>
-   <span class="support-status">Perfil de PayPal.Me: Cayetano Benítez</span>
-  </article>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f9eee9">
+<title>TODO VUELVE | De Caye, con gratitud</title>
+<meta name="description" content="Lo bueno que recibimos merece volver a circular. Conocé mi historia, acompañá mis proyectos y descubrí TODO VUELVE.">
+<link rel="canonical" href="https://caye2404.github.io/todo-vuelve/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TODO VUELVE · Lo bueno que recibimos">
+<meta property="og:description" content="Un día estuvieron para mí. Hoy quiero que algo bueno vuelva a alguien más.">
+<meta property="og:url" content="https://caye2404.github.io/todo-vuelve/">
+<meta property="og:image" content="https://caye2404.github.io/recaudacioncaye/caye.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fffaf6;--blush:#f8e6e4;--rose:#f1cbd0;--rose-dark:#a44860;--coral:#b25165;
+  --plum:#442d3b;--plum-deep:#32202c;--ink:#3c2e37;--muted:#705c66;
+  --line:#e8d2d3;--white:#fff;--soft:#fff3ee;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.55 "DM Sans",system-ui,sans-serif}
+a{color:inherit}
+button,input{font:inherit}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #a44965;outline-offset:4px}
+.skip{position:absolute;left:-9999px;top:10px;background:#fff;color:var(--plum);padding:8px 16px;z-index:99}.skip:focus{left:10px}
+.container{width:min(1140px,calc(100% - 44px));margin:auto}
+.site-head{position:relative;z-index:2;background:rgba(255,250,246,.95);border-bottom:1px solid #e9d5d4}
+.head-inner{min-height:82px;display:flex;gap:20px;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;font-weight:700;letter-spacing:.15em;color:var(--plum);font-size:16px;white-space:nowrap}
+.logo span{color:var(--coral)}
+.site-nav{display:flex;gap:26px;align-items:center}
+.site-nav a{text-decoration:none;font-size:13px;color:#654f5a;font-weight:600}
+.site-nav a:hover{color:var(--rose-dark)}
+.nav-cta{border:1px solid var(--coral);padding:11px 16px;border-radius:100px;color:var(--coral)!important}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 19%,#efc4c8 0%,transparent 36%),linear-gradient(134deg,#fffcf7 0%,#f7e6e4 57%,#edd0d3 100%)}
+.hero:after{content:"";position:absolute;width:650px;height:650px;right:-390px;bottom:-440px;border:1px solid #c47d8a66;border-radius:50%;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);align-items:center;gap:65px;padding:70px 0 76px}
+.eyebrow{display:block;text-transform:uppercase;font-weight:700;font-size:11px;letter-spacing:.21em;color:var(--rose-dark)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;letter-spacing:-.035em}
+h1{font-size:clamp(64px,9vw,116px);line-height:.93;margin:20px 0 23px;color:var(--plum);font-weight:600}
+h1 em{color:var(--coral);font-style:normal}
+.hero-lead{font:500 clamp(18px,2.5vw,25px)/1.5 "DM Sans",sans-serif;color:#5a3e4c;max-width:520px;margin:0 0 28px}
+.hero-lead strong{color:var(--plum);font-weight:700}
+.hero-line{font-size:15px;color:var(--muted);margin:0 0 28px;max-width:520px}
+.action-panel{max-width:590px;background:rgba(255,255,255,.82);border:1px solid #eccdd2;box-shadow:0 18px 50px #63364713;border-radius:20px;padding:24px}
+.action-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.action-head strong{font-size:15px;color:var(--plum)}
+.pill{font-weight:700;color:#96516a;border:1px solid #dfb4c1;border-radius:999px;padding:5px 9px;font-size:10px;white-space:nowrap}
+.action-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 19px;border-radius:12px;border:1px solid transparent;font-size:14px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-copy{background:var(--plum);color:#fff}
+.btn-paypal{width:100%;background:var(--coral);color:#fff}
+.btn-paypal:hover{background:#963f55}
+.action-panel form{margin:0}
+.bank-info{font-size:13px;color:#604a56;margin-top:16px}
+.bank-info strong{color:var(--plum)}
+.copy-result{min-height:19px;margin-top:7px;font-size:12px;font-weight:700;color:#8a4054}
+.paypal-alt{font-size:12px;color:#7e626c;margin-top:2px}.paypal-alt a{color:#863a55;text-decoration:underline}
+.contribution-note{margin:16px 0 0;color:#725e69;font-size:11.5px;line-height:1.6;max-width:540px}
+.hero-image-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:525px}
+.portrait-ring{position:relative;width:min(100%,405px);aspect-ratio:4/5;border-radius:215px 215px 145px 145px;overflow:hidden;background:#b96776;border:10px solid rgba(255,255,255,.56);box-shadow:0 28px 75px #663b4a33}
+.portrait-ring img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.portrait-fallback{display:none;width:100%;height:100%;align-items:center;justify-content:center;color:#fff;font-size:110px;font-family:"Playfair Display",serif;background:linear-gradient(135deg,#aa6174,#533143)}
+.portrait-ring.no-photo img{display:none}
+.portrait-ring.no-photo .portrait-fallback{display:flex}
+.image-note{position:absolute;right:0;bottom:19px;max-width:230px;background:#fffaf5;padding:14px 20px;border-radius:14px;box-shadow:0 10px 28px #58344319;font:600 15px/1.5 "Playfair Display",serif;color:var(--plum);transform:rotate(3deg)}
+.section{padding:86px 0}
+.section-title{font:600 clamp(37px,5vw,58px)/1.15 "Playfair Display",serif;margin:14px 0 23px;color:var(--plum)}
+.section-text{font-size:17px;color:var(--muted);max-width:740px;line-height:1.85;margin:0}
+.story-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:85px;align-items:start}
+.story-body{font-size:18px;line-height:1.85;color:#68525d}
+.story-body p{margin:0 0 16px}
+.signature{font:500 32px "Playfair Display",serif;color:var(--coral);margin-top:24px}
+.edition{background:var(--plum);color:#fff6f3}
+.edition .eyebrow{color:#e7abb5}
+.edition .section-title{color:#fff9f7}
+.edition-intro{color:#dbcdd4;max-width:730px;font-size:17px;line-height:1.75}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 15px}
+.stat{border:1px solid #a98491aa;border-radius:16px;padding:25px;background:#ffffff0d}
+.stat strong{display:block;font:600 clamp(30px,5vw,52px)/1 "Playfair Display",serif;color:#ffe1e2}
+.stat span{display:block;font-size:12px;margin-top:10px;color:#e5d5dd}
+.disclaimer{margin:26px 0 22px;border-left:3px solid #e4adb7;padding:16px 20px;background:#ffffff12;border-radius:0 12px 12px 0;font-size:13px;line-height:1.7;color:#f3e5ea}
+.numbers-toggle{border:1px solid #ae8795;border-radius:12px;overflow:hidden}
+.numbers-toggle summary{list-style:none;cursor:pointer;padding:17px 22px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.numbers-toggle summary::-webkit-details-marker{display:none}
+.numbers-toggle summary:after{content:"＋";font-size:24px;color:#f2c3c9}
+.numbers-toggle[open] summary:after{content:"−"}
+.numbers-body{padding:18px 20px 26px;border-top:1px solid #ffffff32}
+.db-status{font-size:13px;color:#f2d5dc;margin:0 0 18px}
+.number-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:7px}
+.number{display:flex;justify-content:center;align-items:center;font-size:11px;padding:9px 0;border:1px solid #ffffff32;border-radius:6px;color:#fffaf7;background:#ffffff0a}
+.number.occupied{color:#f2b5bf;text-decoration:line-through;background:#ffffff08;opacity:.65}
+.old-notice{font-size:14px;margin:21px 0 0;color:#e0d1d9;line-height:1.75}
+.old-notice a{color:#ffd5de;text-underline-offset:3px}
+.services{background:#fff7f3}
+.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:30px}
+.service-card{background:#fff;border:1px solid #ebd9db;border-radius:18px;padding:32px;display:flex;flex-direction:column;align-items:flex-start}
+.service-card h3{font:600 35px "Playfair Display",serif;margin:12px 0;color:var(--plum)}
+.service-card p{color:#715b66;line-height:1.75;flex:1;margin:0 0 23px}
+.service-link{font-weight:700;text-decoration:none;color:#9c4157;border-bottom:2px solid #cc8998;padding-bottom:4px;font-size:14px}
+.faq{padding-top:80px;padding-bottom:80px}
+.faq details{border-bottom:1px solid #e5cfd3;padding:20px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:700;color:#49343f}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:25px;color:var(--coral)}
+.faq details[open] summary:after{content:"−"}
+.faq details p{margin:13px 0 3px;color:#725d69;max-width:820px;line-height:1.8;font-size:15px}
+.site-footer{background:var(--plum-deep);color:#dfcbd4;padding:34px 0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.footer-inner a{color:#ffe0e5}
+@media(max-width:1000px){
+  .hero-grid{gap:22px}
+  .hero-image-wrap{min-height:480px}
+  .image-note{right:-3px}
+  .story-grid{gap:35px}
+  .number-grid{grid-template-columns:repeat(10,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ .container{width:min(100% - 34px,580px)}
+ .site-head .head-inner{min-height:64px}
+ .site-nav{gap:13px}.site-nav a:not(.nav-cta){display:none}
+ .nav-cta{padding:8px 11px}
+ .hero-grid{display:flex;flex-direction:column-reverse;gap:22px;padding:26px 0 55px;align-items:stretch}
+ .hero-image-wrap{min-height:0;justify-content:center}
+ .portrait-ring{width:min(70vw,250px);aspect-ratio:4/4.2;border-width:6px}
+ .image-note{right:8%;bottom:5px;padding:8px 11px;font-size:13px;max-width:150px}
+ h1{font-size:clamp(57px,12vw,83px);margin:12px 0 17px}
+ .hero-lead{font-size:19px;margin-bottom:14px}
+ .hero-line{font-size:14px;margin-bottom:18px}
+ .action-panel{padding:19px}
+ .action-head{margin-bottom:14px}
+ .action-buttons{grid-template-columns:1fr}
+ .btn{min-height:52px}
+ .section{padding:65px 0}
+ .story-grid{grid-template-columns:1fr;gap:14px}
+ .section-title{font-size:40px}
+ .story-body{font-size:16px}
+ .stats{gap:8px}
+ .stat{padding:18px 10px}
+ .stat strong{font-size:clamp(22px,6vw,38px)}
+ .stat span{font-size:11px}
+ .number-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+ .services-grid{grid-template-columns:1fr}
+ .service-card{padding:25px}
+ .footer-inner{display:block}.footer-inner>*{display:block;margin-bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a href="#inicio" class="skip">Ir al contenido</a>
+<header class="site-head">
+ <div class="container head-inner">
+  <a href="#inicio" class="logo">TODO <span>VUELVE.</span></a>
+  <nav class="site-nav" aria-label="Navegación">
+   <a href="#historia">Mi historia</a>
+   <a href="#edicion">La iniciativa</a>
+   <a href="#proyectos">CayeLab</a>
+   <a class="nav-cta" href="#apoyar">Acompañar ♥</a>
+  </nav>
  </div>
- <div class="support-clarity"><strong>Importante:</strong> los aportes son completamente voluntarios y personales, no son una compra ni una reserva de números, no generan participaciones ni aumentan probabilidades de recibir un premio. No se trata de una colecta benéfica registrada. La edición numerada permanece cerrada, sujeta a la regularización de las condiciones correspondientes.</div>
+</header>
+<main>
+<section class="hero" id="inicio" aria-labelledby="titulo">
+ <div class="container hero-grid">
+  <div class="hero-content">
+   <span class="eyebrow">Una iniciativa de Caye · Villa La Angostura</span>
+   <h1 id="titulo">TODO<br><em>VUELVE.</em></h1>
+   <p class="hero-lead"><strong>Lo bueno que recibimos merece volver a circular.</strong></p>
+   <p class="hero-line">Un día estuvieron para mí. Hoy quiero seguir construyendo algo lindo con todo ese cariño.</p>
+   <div class="action-panel" id="apoyar">
+    <div class="action-head"><strong>¿Querés acompañarme?</strong><span class="pill">Aportes voluntarios</span></div>
+    <div class="action-buttons">
+     <button type="button" id="copyAlias" class="btn btn-copy" aria-label="Copiar alias caye2400 del Banco Galicia">♡ Copiar alias Galicia</button>
+     <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="hosted_button_id" value="LC22GZCYF8AH4">
+      <button type="submit" class="btn btn-paypal">♥ Aportar con PayPal</button>
+     </form>
+    </div>
+    <div class="bank-info">Alias <strong>caye2400</strong> · Banco Galicia<br>Titular: <strong>Cayetano Raúl Benítez</strong></div>
+    <div class="copy-result" id="copyStatus" role="status" aria-live="polite"></div>
+    <div class="paypal-alt">También podés abrir <a href="https://paypal.me/caye2404" target="_blank" rel="noopener noreferrer">mi PayPal.Me</a>.</div>
+   </div>
+   <p class="contribution-note">Son aportes personales opcionales, no una colecta benéfica. No compran ni reservan números, ni dan derecho a un premio. Las participaciones están cerradas.</p>
+  </div>
+  <div class="hero-image-wrap">
+   <div class="portrait-ring" id="portraitWrap">
+    <img id="portrait" src="https://caye2404.github.io/recaudacioncaye/caye.png" alt="Foto de Caye, impulsor de TODO VUELVE" width="410" height="520" fetchpriority="high">
+    <div class="portrait-fallback" aria-hidden="true">C.</div>
+   </div>
+   <div class="image-note">Gracias por haber estado. ♡</div>
+  </div>
+ </div>
 </section>
-<div class="light">
- <section class="section" id="servicios">
-  <div class="kicker">Lo que también estoy construyendo</div>
-  <h2>Ideas que se convierten en soluciones.</h2>
-  <p>Además de esta iniciativa, trabajo en tecnología, diseño web y herramientas para ayudar a negocios y emprendedores. Son servicios profesionales que podés contratar de manera independiente.</p>
+<section class="section" id="historia">
+ <div class="container story-grid">
+  <div>
+   <span class="eyebrow">Por qué nació TODO VUELVE</span>
+   <h2 class="section-title">Hay gestos que no se olvidan.</h2>
+  </div>
+  <div class="story-body">
+   <p>Me vine a Villa La Angostura buscando una nueva etapa. Hubo días de incertidumbre y muchos desafíos por delante, pero también apareció gente maravillosa que me dio una mano cuando más lo necesitaba.</p>
+   <p>Hoy sigo trabajando y construyendo mi camino. <strong>Esta es mi manera de agradecer</strong> y de recordar que un gesto puede cambiarle el día —y a veces la vida— a alguien.</p>
+   <div class="signature">Con cariño, Caye.</div>
+  </div>
+ </div>
+</section>
+<section class="section edition" id="edicion">
+ <div class="container">
+  <span class="eyebrow">La próxima edición · En preparación</span>
+  <h2 class="section-title">Un millón de razones para agradecer.</h2>
+  <p class="edition-intro">Estamos preparando una nueva edición numerada. Por ahora es informativa: no se reciben compras ni se asignan números desde la página.</p>
+  <div class="stats" aria-label="Características previstas">
+   <div class="stat"><strong>$1.000.000</strong><span>Premio previsto para una persona</span></div>
+   <div class="stat"><strong>300</strong><span>Números previstos</span></div>
+   <div class="stat"><strong>$5.000</strong><span>Valor previsto por número</span></div>
+  </div>
+  <div class="disclaimer"><strong>Transparencia:</strong> el máximo bruto previsto, si se asignaran los 300 números, sería $1.500.000. De ese monto, $1.000.000 se destinarían al premio y $500.000 quedarían antes de comisiones, impuestos y demás gastos. La fecha, el mecanismo, los requisitos legales y el tratamiento de las participaciones anteriores siguen pendientes de definición. <strong>Los aportes voluntarios de arriba no forman parte de esta edición ni dan participación alguna.</strong></div>
+  <details class="numbers-toggle" id="numbersToggle">
+   <summary>Ver numeración y estados registrados</summary>
+   <div class="numbers-body">
+    <p class="db-status" id="db-status" role="status" aria-live="polite">Consultando los números en Supabase…</p>
+    <div id="numbers" class="number-grid" aria-label="Numeración de 001 a 300 en Supabase"></div>
+   </div>
+  </details>
+  <p class="old-notice">¿Habías participado en la edición anterior? <a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20participe%20en%20la%20edicion%20anterior%20y%20quiero%20revisar%20mi%20numero." target="_blank" rel="noopener noreferrer">Escribime por privado para revisar tu participación</a>. No es necesario hacer un nuevo pago para iniciar esa revisión.</p>
+ </div>
+</section>
+<section class="section services" id="proyectos">
+ <div class="container">
+  <span class="eyebrow">Lo que estoy creando</span>
+  <h2 class="section-title">También podés acompañarme con trabajo.</h2>
+  <p class="section-text">Diseño, tecnología y herramientas para que los negocios funcionen mejor. Estos proyectos son independientes de TODO VUELVE.</p>
   <div class="services-grid">
    <article class="service-card">
-    <div class="service-tag">Diseño · Soporte · Automatizaciones</div>
+    <span class="eyebrow">Estudio de soluciones digitales</span>
     <h3>CayeLab</h3>
-    <p>Mi espacio de soluciones digitales: páginas web profesionales, automatización de tareas, herramientas para gastronomía y soporte informático.</p>
+    <p>Diseño web, soporte informático, automatizaciones y soluciones digitales a medida para comercios y profesionales.</p>
     <a class="service-link" href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">Conocer CayeLab ↗</a>
    </article>
    <article class="service-card">
-    <div class="service-tag">Administración · Software en desarrollo</div>
+    <span class="eyebrow">Software en desarrollo</span>
     <h3>NÚCLEO</h3>
-    <p>Estoy desarrollando una solución para ordenar proveedores, facturas, vencimientos, pagos y conciliaciones. Si tenés un negocio, podemos conversar sobre una prueba o una implementación a medida.</p>
+    <p>Un sistema que estoy desarrollando para ordenar proveedores, facturas, vencimientos y pagos de pequeños negocios.</p>
     <a class="service-link" href="https://wa.me/5491126830194?text=Hola%20Caye.%20Quiero%20conocer%20N%C3%9ACLEO%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por NÚCLEO ↗</a>
    </article>
   </div>
- </section>
-</div>
-<section class="section faq" id="preguntas"><div class="kicker">Preguntas frecuentes</div><h2>Todo claro, desde el comienzo.</h2><details><summary>¿Ya puedo comprar un número?</summary><p>No. Las participaciones están cerradas mientras se verifican los registros anteriores y se terminan las bases.</p></details><details><summary>¿Cuántos números tendrá la nueva edición?</summary><p>Se prevén 300 números de $5.000 cada uno. La estructura definitiva se confirmará al publicar las condiciones.</p></details><details><summary>¿Cuál será el premio?</summary><p>Está previsto un premio único de $1.000.000 para una persona ganadora.</p></details><details><summary>¿Qué ocurre si participé antes?</summary><p>Contactame por privado con tu número y comprobante. Cada caso se verificará antes de decidir cómo se reconocerán las participaciones previas. No tenés que volver a pagar para iniciar la revisión.</p></details><details><summary>¿Cuándo y cómo será el sorteo?</summary><p>La fecha y el mecanismo aún no están definidos. Se publicarán junto con las bases completas antes de recibir nuevas participaciones.</p></details><details><summary>¿Dónde puedo seguir las novedades?</summary><p>En Instagram, <a href="https://www.instagram.com/soycaye.ok/" target="_blank" rel="noopener noreferrer">@soycaye.ok</a>.</p></details><div style="margin-top:35px"><a class="button" href="https://www.instagram.com/soycaye.ok/" target="_blank" rel="noopener noreferrer">SEGUÍ LAS NOVEDADES ↗</a></div></section></main>
-<footer class="foot">CAYE · TODO VUELVE · VILLA LA ANGOSTURA<br><br>Una iniciativa personal en preparación · <a href="https://www.instagram.com/soycaye.ok/">@soycaye.ok</a></footer>
+ </div>
+</section>
+<section class="section faq" id="preguntas">
+ <div class="container">
+  <span class="eyebrow">Todo claro</span>
+  <h2 class="section-title">Preguntas frecuentes.</h2>
+  <details><summary>¿Los aportes me dan un número?</summary><p>No. Los aportes a través de Galicia o PayPal son personales, voluntarios e independientes de la edición numerada. No generan ninguna participación ni premio.</p></details>
+  <details><summary>¿Ya puedo elegir y comprar un número?</summary><p>Todavía no. Los números se muestran solo para consulta. Antes de abrir una edición paga, deben definirse sus bases, condiciones y autorizaciones.</p></details>
+  <details><summary>¿Qué pasa si participé antes?</summary><p>Tu participación anterior no se descarta. Podés escribirme por privado con tu número y comprobante para revisarla. <a href="https://wa.me/5491126830194?text=Hola%20Caye.%20Tengo%20una%20participacion%20anterior%20para%20revisar." target="_blank" rel="noopener noreferrer">Contactarme por WhatsApp</a>.</p></details>
+ </div>
+</section>
+</main>
+<footer class="site-footer">
+ <div class="container footer-inner">
+  <span>© 2026 TODO VUELVE · Una iniciativa personal de Caye</span>
+  <span>Villa La Angostura, Argentina</span>
+  <a href="https://www.instagram.com/soycaye.ok/" target="_blank" rel="noopener noreferrer">Instagram @soycaye.ok</a>
+ </div>
+</footer>
 <script>
-const root=document.getElementById('numbers'),status=document.getElementById('db-status');
-const endpoint='https://kytneqghybtvkgsitkbm.supabase.co/rest/v1/todo_vuelve_estado_publico?select=numero,estado&order=numero.asc&limit=300';
-const key='sb_publishable_k6IdQGtHMZxvGn_beWu8Rg_zm4CFy1R';
-async function load(){
- try{
-  const r=await fetch(endpoint,{headers:{apikey:key},cache:'no-store'});
-  if(!r.ok)throw Error('HTTP '+r.status);
-  const data=await r.json();
-  if(!Array.isArray(data)||data.length!==300||new Set(data.map(x=>x.numero)).size!==300||data.some(x=>!Number.isInteger(x.numero)||x.numero<1||x.numero>300))throw Error('Registro incompleto');
-  root.replaceChildren();const frag=document.createDocumentFragment();
-  for(const x of data){
-   const el=document.createElement('div');el.className='number';el.textContent=String(x.numero).padStart(3,'0');
-   el.title=x.estado;el.setAttribute('aria-label','Número '+x.numero+': '+x.estado);
-   if(x.estado!=='disponible'){el.style.opacity='.48';el.style.textDecoration='line-through';el.style.borderColor='#d6b67b66'}
-   frag.appendChild(el);
-  }
-  root.appendChild(frag);
-  status.textContent='Datos sincronizados · '+data.filter(x=>x.estado!=='disponible').length+' números ocupados · Ventas cerradas';
- }catch(err){root.replaceChildren();status.textContent='No se puede verificar la numeración. Las participaciones permanecen cerradas.';}
-}
-load();
-
-// Copiar alias de aportes voluntarios: funciona por Clipboard API y ofrece selección manual si falla.
+"use strict";
 (function(){
- const button=document.getElementById('copyAlias'),feedback=document.getElementById('aliasCopiedStatus');
- if(!button||!feedback)return;
- button.addEventListener('click',async()=>{
-  try {
-   await navigator.clipboard.writeText('caye2400');
-   feedback.textContent='Alias copiado. Comprobá el destinatario antes de transferir.';
-   button.textContent='¡Alias copiado!';
-  } catch(err) {
-   const input=document.createElement('input');
-   input.value='caye2400';input.setAttribute('readonly','readonly');input.style.position='fixed';input.style.top='-1000px';
-   document.body.appendChild(input);input.select();
-   let copied=false;try{copied=document.execCommand('copy')}catch(e){}
-   input.remove();
-   feedback.textContent=copied?'Alias copiado.':'No se pudo copiar automáticamente. Seleccioná y copiá el alias caye2400.';
+  const btn=document.getElementById("copyAlias"),res=document.getElementById("copyStatus");
+  btn.addEventListener("click",async function(){
+    let ok=false;
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        await navigator.clipboard.writeText("caye2400");ok=true;
+      }
+    }catch(e){}
+    if(!ok){
+      const input=document.createElement("textarea");
+      input.value="caye2400";input.setAttribute("readonly","");
+      input.style.position="fixed";input.style.left="-9999px";
+      document.body.appendChild(input);input.select();
+      try{ok=document.execCommand("copy")}catch(e){}
+      input.remove();
+    }
+    res.textContent=ok?"¡Alias copiado! Comprobá el destinatario antes de transferir.":"Copiá el alias manualmente: caye2400";
+    if(ok)btn.textContent="✓ Alias copiado";
+  });
+  const photo=document.getElementById("portrait"),wrap=document.getElementById("portraitWrap");
+  let retry=0;
+  photo.addEventListener("error",function(){
+    if(retry===0){retry++;photo.src="https://raw.githubusercontent.com/caye2404/recaudacioncaye/main/caye.png"}
+    else{wrap.classList.add("no-photo")}
+  });
+  const root=document.getElementById("numbers"),status=document.getElementById("db-status");
+  const key="sb_publishable_k6IdQGtHMZxvGn_beWu8Rg_zm4CFy1R";
+  const url="https://kytneqghybtvkgsitkbm.supabase.co/rest/v1/todo_vuelve_estado_publico?select=numero,estado&order=numero.asc&limit=300";
+  let loaded=false;
+  async function load(){
+    if(loaded)return;loaded=true;
+    try{
+      const r=await fetch(url,{headers:{apikey:key},cache:"no-store"});
+      if(!r.ok)throw Error("No se pudo consultar");
+      const data=await r.json();
+      if(!Array.isArray(data)||data.length!==300||new Set(data.map(x=>x.numero)).size!==300||data.some(x=>!Number.isInteger(x.numero)||x.numero<1||x.numero>300||!["disponible","reservado","pagado","anulado"].includes(x.estado)))throw Error("Datos incompletos");
+      const frag=document.createDocumentFragment();
+      for(const x of data){
+        const el=document.createElement("span");el.className="number"+(x.estado==="disponible"?"":" occupied");el.textContent=String(x.numero).padStart(3,"0");
+        el.title=x.estado==="disponible"?"Sin asignar":x.estado;el.setAttribute("aria-label","Número "+String(x.numero).padStart(3,"0")+", "+el.title);
+        frag.appendChild(el);
+      }
+      root.replaceChildren(frag);
+      const occupied=data.filter(x=>x.estado!=="disponible").length;
+      status.textContent="Datos sincronizados · "+occupied+" números asignados o bloqueados · Participaciones cerradas";
+    }catch(e){
+      root.replaceChildren();status.textContent="No se pudo verificar la numeración. Las participaciones continúan cerradas.";
+    }
   }
- });
+  document.getElementById("numbersToggle").addEventListener("toggle",function(){if(this.open)load()});
 })();
 </script>
-</body></html>
+</body>
+</html>
