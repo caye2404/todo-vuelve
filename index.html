@@ -152,7 +152,7 @@ h1 em{color:var(--coral);font-style:normal}
  .footer-inner{display:block}.footer-inner>*{display:block;margin-bottom:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-</style>
+.number-page-link{margin-top:24px;padding:25px;background:#ffffff16;border:1px solid #d9adb990;border-radius:16px;display:flex;gap:20px;align-items:center;justify-content:space-between}.number-page-link h3{font:600 29px "Playfair Display",serif;margin:6px 0 8px;color:#ffe1e5}.number-page-link p{margin:0;color:#e3cfd9;font-size:13px;line-height:1.7;max-width:600px}.number-page-button{flex-shrink:0;padding:15px 22px;background:#f9dbe0;border-radius:10px;text-decoration:none;font-size:14px;font-weight:700;color:#543142;min-height:49px;display:inline-flex;align-items:center;justify-content:center}.number-page-button:hover{background:#fff0f2}@media(max-width:760px){.number-page-link{display:block;padding:19px}.number-page-button{width:100%;margin-top:18px}}</style>
 </head>
 <body>
 <a href="#inicio" class="skip">Ir al contenido</a>
@@ -161,7 +161,7 @@ h1 em{color:var(--coral);font-style:normal}
   <a href="#inicio" class="logo">TODO <span>VUELVE.</span></a>
   <nav class="site-nav" aria-label="Navegación">
    <a href="#historia">Mi historia</a>
-   <a href="#edicion">La iniciativa</a>
+   <a href="numeros.html">Ver números</a>
    <a href="#proyectos">CayeLab</a>
    <a class="nav-cta" href="#apoyar">Acompañar ♥</a>
   </nav>
@@ -223,13 +223,7 @@ h1 em{color:var(--coral);font-style:normal}
    <div class="stat"><strong>$5.000</strong><span>Valor previsto por número</span></div>
   </div>
   <div class="disclaimer"><strong>Transparencia:</strong> el máximo bruto previsto, si se asignaran los 300 números, sería $1.500.000. De ese monto, $1.000.000 se destinarían al premio y $500.000 quedarían antes de comisiones, impuestos y demás gastos. La fecha, el mecanismo, los requisitos legales y el tratamiento de las participaciones anteriores siguen pendientes de definición. <strong>Los aportes voluntarios de arriba no forman parte de esta edición ni dan participación alguna.</strong></div>
-  <details class="numbers-toggle" id="numbersToggle">
-   <summary>Ver numeración y estados registrados</summary>
-   <div class="numbers-body">
-    <p class="db-status" id="db-status" role="status" aria-live="polite">Consultando los números en Supabase…</p>
-    <div id="numbers" class="number-grid" aria-label="Numeración de 001 a 300 en Supabase"></div>
-   </div>
-  </details>
+  <div class="number-page-link"><div><span class="eyebrow" style="color:#efbcc6">CONSULTA EN LÍNEA · 001 AL 300</span><h3>Los números tienen su propio espacio.</h3><p>Consultá los estados actualizados, buscá un número y revisá la numeración completa desde el celular o la computadora.</p></div><a href="numeros.html" class="number-page-button">Ver los 300 números ↗</a></div>
   <p class="old-notice">¿Habías participado en la edición anterior? <a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20participe%20en%20la%20edicion%20anterior%20y%20quiero%20revisar%20mi%20numero." target="_blank" rel="noopener noreferrer">Escribime por privado para revisar tu participación</a>. No es necesario hacer un nuevo pago para iniciar esa revisión.</p>
  </div>
 </section>
@@ -299,31 +293,7 @@ h1 em{color:var(--coral);font-style:normal}
     if(retry===0){retry++;photo.src="https://raw.githubusercontent.com/caye2404/recaudacioncaye/main/caye.png"}
     else{wrap.classList.add("no-photo")}
   });
-  const root=document.getElementById("numbers"),status=document.getElementById("db-status");
-  const key="sb_publishable_k6IdQGtHMZxvGn_beWu8Rg_zm4CFy1R";
-  const url="https://kytneqghybtvkgsitkbm.supabase.co/rest/v1/todo_vuelve_estado_publico?select=numero,estado&order=numero.asc&limit=300";
-  let loaded=false;
-  async function load(){
-    if(loaded)return;loaded=true;
-    try{
-      const r=await fetch(url,{headers:{apikey:key},cache:"no-store"});
-      if(!r.ok)throw Error("No se pudo consultar");
-      const data=await r.json();
-      if(!Array.isArray(data)||data.length!==300||new Set(data.map(x=>x.numero)).size!==300||data.some(x=>!Number.isInteger(x.numero)||x.numero<1||x.numero>300||!["disponible","reservado","pagado","anulado"].includes(x.estado)))throw Error("Datos incompletos");
-      const frag=document.createDocumentFragment();
-      for(const x of data){
-        const el=document.createElement("span");el.className="number"+(x.estado==="disponible"?"":" occupied");el.textContent=String(x.numero).padStart(3,"0");
-        el.title=x.estado==="disponible"?"Sin asignar":x.estado;el.setAttribute("aria-label","Número "+String(x.numero).padStart(3,"0")+", "+el.title);
-        frag.appendChild(el);
-      }
-      root.replaceChildren(frag);
-      const occupied=data.filter(x=>x.estado!=="disponible").length;
-      status.textContent="Datos sincronizados · "+occupied+" números asignados o bloqueados · Participaciones cerradas";
-    }catch(e){
-      root.replaceChildren();status.textContent="No se pudo verificar la numeración. Las participaciones continúan cerradas.";
-    }
-  }
-  document.getElementById("numbersToggle").addEventListener("toggle",function(){if(this.open)load()});
+
 })();
 </script>
 </body>
