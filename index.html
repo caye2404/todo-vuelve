@@ -85,9 +85,9 @@ h2.section-title{font:600 clamp(34px,4.8vw,59px)/1.13 "Playfair Display",Georgia
 .pay-btn:hover{background:#245143}.pay-btn.paypal{background:#003087}.pay-btn.paypal:hover{background:#0a459b}
 .pay-msg{margin:11px 0 0;font-size:12px;color:#547862;min-height:18px}
 .hint{font-size:12px!important;color:#849086!important;margin:11px 0 0!important}
-.legal-soft{display:flex;gap:13px;align-items:start;background:#f3f2e9;border:1px solid #e4e3d8;border-radius:12px;padding:19px 22px;margin-top:25px}
-.legal-soft .heart{font-size:21px;color:var(--orange-dark)}
-.legal-soft p{color:#647168;font-size:13px;margin:0;line-height:1.7}
+.legal-soft{margin-top:23px;padding:11px 0 0;border-top:1px solid #e3e6df;color:#6c786f;font-size:12px}
+.legal-soft summary{width:max-content;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.legal-soft p{max-width:780px;color:#667269;font-size:12px;margin:10px 0 0;line-height:1.65}
 .number-section{background:#e8efe7}
 .numbers-head{display:flex;justify-content:space-between;align-items:end;gap:35px}
 .big-number{color:#d1ddd2;font:700 clamp(80px,14vw,168px) "Playfair Display",serif;line-height:.9}
@@ -150,7 +150,7 @@ footer{background:var(--forest-dark);color:#c5d5cd;padding:32px 0;font-size:12px
 <a class="button button-light" href="numeros.html" aria-label="Explorar los 300 números de la edición, actualmente sin ventas">↗ VER LOS 300 NÚMEROS</a>
 <button class="button button-lock" disabled aria-label="Comprar número, todavía no habilitado">🔒 COMPRAR NÚMERO</button>
 </div>
-<p class="cta-help">La edición numerada todavía no acepta compras. Podés consultar sus números y seguir su avance.</p>
+<p class="cta-help">La compra de números todavía no está habilitada. Sí podés ver los 300 números y colaborar con la colecta por separado.</p>
 </div>
 <div class="hero-media" aria-label="Caye, creador de TODO VUELVE">
 <div class="portrait-halo" aria-hidden="true"></div>
@@ -166,12 +166,12 @@ footer{background:var(--forest-dark);color:#c5d5cd;padding:32px 0;font-size:12px
 <div class="progress-line"><strong id="progressText">Consultando números…</strong><span id="progressPercent">—</span></div>
 <div class="track" role="progressbar" aria-label="Avance de números asignados o bloqueados" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0" id="progressTrack"><div class="fill" id="progressFill"></div></div>
 <div class="progress-meta"><span><b id="freeCount">—</b> sin asignar</span><span><b id="reservedCount">—</b> reservados</span><span><b id="paidCount">—</b> pagados</span><a href="numeros.html" style="font-weight:800;color:var(--forest)">Ver detalle ↗</a></div>
-<p class="rail-hint">Esta barra muestra el estado de los <b>300 números</b> en Supabase. No representa dinero recaudado ni aportes voluntarios. Los números sin asignar no están a la venta mientras la edición siga cerrada.</p>
+<p class="rail-hint">Avance de los <b>300 números</b>, actualizado desde el sistema. La colecta por Galicia y PayPal se lleva por separado.</p>
 </div></div></section>
 <section class="sec sec-light" id="apoyar"><div class="wrap">
-<span class="smallhead">UN GESTO HACE LA DIFERENCIA</span>
+<span class="smallhead">COLECTA SOLIDARIA PERSONAL</span>
 <h2 class="section-title">Si te nace acompañar,<br>hay dos formas sencillas.</h2>
-<p class="section-intro">Los aportes son personales, libres y voluntarios. Me ayudan a seguir desarrollando mis proyectos, sin que tengas que comprar nada ni comprometerte a participar en la edición numerada.</p>
+<p class="section-intro">Una colecta a mi beneficio para seguir adelante y hacer crecer mis proyectos. Si querés darme una mano, podés colaborar directamente por Galicia o PayPal.</p>
 <div class="payments">
 <article class="payment">
 <div class="pay-head"><div class="pay-brand">
@@ -198,7 +198,7 @@ footer{background:var(--forest-dark);color:#c5d5cd;padding:32px 0;font-size:12px
 <p class="hint">También disponible en <a target="_blank" rel="noopener noreferrer" href="https://paypal.me/caye2404" style="color:#003087">mi perfil PayPal.Me ↗</a></p>
 </article>
 </div>
-<div class="legal-soft" id="legales"><span class="heart" aria-hidden="true">♡</span><p><strong>Una aclaración importante:</strong> nadie está obligado a aportar ni participar. Los aportes son personales y voluntarios; no compran números, no dan derecho a premios y no están vinculados a la edición numerada. No se presenta como colecta benéfica registrada.</p></div>
+<details class="legal-soft" id="legales"><summary>Aviso legal de la colecta</summary><p>TODO VUELVE es una iniciativa solidaria personal a beneficio de Cayetano Raúl Benítez. Las contribuciones por Galicia y PayPal son voluntarias y no constituyen la compra o reserva de un número de sorteo. La edición numerada está disponible para consulta, pero su venta aún no se encuentra habilitada.</p></details>
 </div></section>
 <section class="sec number-section" id="edicion"><div class="wrap">
 <div class="numbers-head"><div>
