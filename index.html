@@ -39,6 +39,127 @@ footer{background:var(--forest);color:#d9e9de;padding:38px 0}.foot{display:flex;
 @media(max-width:720px){.nav{min-height:68px}.navlinks{gap:13px}.navlinks a:not(.navcta){display:none}.navlinks .navcta{font-size:11px;padding:8px 12px}.brand{font-size:17px}.hero-grid{grid-template-columns:1fr;gap:34px;padding:51px 0 106px}.hero h1{font-size:clamp(49px,12vw,75px)}.herolead{font-size:20px}.herofoot{gap:9px 15px}.portrait{margin:0 auto;max-width:285px;aspect-ratio:4/4}.portrait-label{font-size:14px;left:-12px}.fund{margin-top:-45px}.fundcard{grid-template-columns:1fr;gap:20px;padding:25px 22px}.fundmetric strong{font-size:32px}section.section{padding:68px 0}.two-col,.storywrap{grid-template-columns:1fr;gap:30px}.features,.donate-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.use{grid-template-columns:1fr;gap:12px}.section h2{font-size:39px}.storywrap{gap:20px}.quote{min-height:190px}.footnav{justify-content:flex-start}}
 @media(max-width:390px){.wrap{width:calc(100% - 30px)}.actions .btn{width:100%}.hero h1{font-size:46px}.section h2{font-size:34px}.donatecard{padding:24px}.fundmetric strong{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.fundbar div{transition:none}}
+
+/* TODO VUELVE · Rediseño nocturno: lectura cómoda, contraste alto y tipografía amplia */
+:root{--forest:#090c12;--forest2:#151d29;--cream:#090c12;--paper:#141923;--lime:#baf28c;--peach:#ffc9a9;--ink:#f5f7fb;--muted:#c2cbd7;--line:#343e4c;--white:#f8fafc}
+html{scroll-padding-top:24px}
+body{background:#090c12;color:#f5f7fb;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{text-underline-offset:4px}
+:focus-visible{outline:3px solid #baf28c;outline-offset:4px}
+.eyebrow,.eyebrow.dark{color:#bbef9e;font-size:12px;letter-spacing:.13em}
+.muted,.section .lead{color:#c5cfda}
+.sitehead{background:#0c1018;border-bottom:1px solid #2e3744;position:sticky;top:0}
+.nav{min-height:78px}
+.navlinks a{font-size:15px;color:#e9f0f7}
+.navlinks a:hover,.footnav a:hover,.service a:hover{color:#baf28c}
+.navlinks .navcta{border-color:#baf28c;color:#baf28c}
+.hero{background:radial-gradient(ellipse at 75% 22%,#20352d 0%,#101a1e 34%,#090c12 72%)}
+.hero:before{border-color:#e7ffea13;box-shadow:0 0 0 95px #ffffff04,0 0 0 192px #ffffff02}
+.hero-grid{padding-top:95px;padding-bottom:148px}
+.herolead{color:#f5f8f4}
+.herosub{color:#d0d9e3;font-size:18px;line-height:1.7}
+.herofoot{color:#c4d1da;font-size:14px}
+.portrait img{border-color:#c5d99d24}
+.portrait-label{background:#e8f4db;color:#18251d}
+.btn{min-height:58px;font-size:15px;letter-spacing:0}
+.btn-primary{background:#baf28c;color:#111a14;box-shadow:0 9px 30px #baf28c1e}
+.btn-primary:hover{background:#d2ffac}
+.btn-outline{border:1.5px solid #9cc4a6;color:#f2fff2;background:#ffffff08}
+.btn-outline:hover{background:#ffffff18}
+.btn-dark{background:#baf28c;color:#101a14}
+.btn-dark:hover{background:#d4ffaf}
+.btn-white{background:#202b37;border:1px solid #718396;color:#fff}
+.btn-white:hover{background:#304052}
+.fundcard{background:#151b24;border:1px solid #344453;box-shadow:0 24px 76px #0007}
+.fundcard h2{color:#f9fbff}
+.fundcard p{font-size:17px;color:#c5d1de;line-height:1.65}
+.fundlabel{color:#cbe5ba;font-size:13px}
+.fundprogress strong{color:#fff;font-size:clamp(25px,3.4vw,42px)}
+.fundstate{color:#bdc9d4;font-size:14px}
+.fundbar{background:#323e49;height:20px}
+.fundbar div{background:linear-gradient(90deg,#4db9a4,#baf28c)}
+section.section{padding-top:104px;padding-bottom:104px}
+.section h2{color:#f6f9ff}
+.section .lead{font-size:19px;line-height:1.75;max-width:820px}
+.project-section{background:#0b1019}
+.statement{color:#d8f5cb}
+.feature{background:#171e29;border:1px solid #384452;box-shadow:0 7px 24px #0002}
+.feature .symbol{background:#283f31;color:#c9ffab;width:47px;height:47px;font-size:22px}
+.feature h3{font-size:21px;color:#fff}
+.feature p{font-size:17px;line-height:1.75;color:#c7d1dc}
+.donate-section{background:#101823}
+.donatecard{background:#19222d;border:1px solid #3c4b5b;box-shadow:0 14px 40px #0004}
+.donatecard h3{color:#fff;font-size:28px}
+.donatecard p{font-size:17px;color:#c8d3df;line-height:1.7}
+.brandfallback{color:#f7f9ff}
+.brandlogo{filter:drop-shadow(0 0 1px #fff3)}
+.chip{background:#2a4032;color:#d4f9c8;font-size:13px}
+.aliasbox{background:#0e151e;border:1px dashed #8eae91}
+.aliasbox small{color:#d4dce5;font-size:14px}
+.aliasbox strong{color:#dcffb9;font-size:clamp(28px,3vw,34px)}
+.donatecard form .btn{background:#177cce;color:#fff}
+.fine{font-size:14px!important;color:#c3d0df!important}
+.feedback{font-size:15px;color:#baf28c}
+.usebox{background:#1a2731;border-left:4px solid #9bdf8f}
+.usebox strong{font-size:17px;color:#f7fcff}
+.usebox span{font-size:16px;color:#c4d0db;line-height:1.6}
+.service-section{background:#0b1019}
+.service{background:#171e29;border:1px solid #3b4757}
+.service .mark{font-size:14px;color:#ffc7aa}
+.service h3{color:#fff;font-size:30px}
+.service p{font-size:17px;line-height:1.75;color:#cbd4df}
+.service a{color:#baf28c;font-size:16px}
+.story-section{background:#101722}
+.storywrap{align-items:start}
+.quote{background:linear-gradient(155deg,#233d32,#131e27);border:1px solid #3e6a52;color:#f5faf3;line-height:1.35}
+.quote em{color:#baf28c}
+.storycopy p{font-size:18px;line-height:1.9;color:#d6dfe8;margin:0 0 19px}
+.storycopy strong{color:#e1ffba}
+.signature{display:block;margin-top:21px;color:#ffceb3;font-size:28px}
+footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
+.foot p{color:#c3cfda;font-size:14px}
+.footnav a{font-size:14px}
+.footer-small{font-size:13px;color:#b9c6d1}
+@media(max-width:720px){
+  body{font-size:18px;line-height:1.7}
+  .sitehead{position:relative}
+  .wrap{width:calc(100% - 36px)}
+  .nav{min-height:73px}
+  .brand{font-size:20px}
+  .navlinks .navcta{font-size:13px;padding:10px 12px}
+  .hero-grid{padding-top:58px;padding-bottom:115px}
+  .hero h1{font-size:clamp(48px,11vw,70px);line-height:1.09}
+  .herolead{font-size:21px}
+  .herosub{font-size:18px}
+  .herofoot{font-size:14px}
+  .fundcard{padding:28px 24px;gap:26px}
+  .fundcard p{font-size:17px}
+  .fundprogress strong{font-size:28px}
+  section.section{padding:75px 0}
+  .section h2{font-size:clamp(35px,9vw,44px)}
+  .section .lead{font-size:18px}
+  .statement{font-size:clamp(26px,7vw,33px)}
+  .feature{padding:25px}
+  .feature h3{font-size:21px}
+  .feature p{font-size:17px}
+  .donatecard{padding:27px}
+  .donatecard p{font-size:17px}
+  .usebox strong{font-size:17px}
+  .usebox span{font-size:16px}
+  .service p{font-size:17px}
+  .storycopy p{font-size:18px;line-height:1.84}
+  .quote{padding:29px 25px;font-size:clamp(26px,7vw,36px)}
+  .signature{font-size:25px}
+}
+@media(max-width:390px){
+  .hero h1{font-size:47px}
+  .section h2{font-size:35px}
+  .brand{font-size:18px}
+  .navlinks .navcta{font-size:12px}
+  .fundprogress strong{font-size:25px}
+  .fundcard{padding:25px 20px}
+  .donatecard{padding:23px}
+}
 </style>
 </head>
 <body>
