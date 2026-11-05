@@ -1,46 +1,32 @@
-# TODO VUELVE
+# TODO VUELVE — campaña de crowdfunding para NÚCLEO
 
-Sitio independiente y sistema de numeración de TODO VUELVE.
+La etapa pública de TODO VUELVE impulsa el desarrollo de **NÚCLEO**, una herramienta web para ayudar a pequeños comercios y emprendimientos a organizar proveedores, facturas, vencimientos, pagos y conciliaciones.
 
-## Enlaces publicados
+## Enlaces
 
-- Portada: https://caye2404.github.io/todo-vuelve/
-- Consulta pública de números: https://caye2404.github.io/todo-vuelve/numeros.html
-- Panel privado: https://caye2404.github.io/todo-vuelve/admin.html
-- CayeLab: https://caye2404.github.io/cayelab-web/
+- Campaña pública: https://caye2404.github.io/todo-vuelve/
+- CayeLab — servicios de páginas web, soporte IT y automatizaciones: https://caye2404.github.io/cayelab-web/
+- Panel histórico privado (solo administrador autorizado): https://caye2404.github.io/todo-vuelve/admin.html
 
-## Tecnología
+## Sitio público
 
-- **GitHub Pages** sirve la portada, la consulta y el panel.
-- **Supabase** guarda los 300 números (001-300), participantes, estados, auditoría y copias internas.
-- **Cloudflare no es parte de esta publicación**. No hace falta habilitar otra base de datos.
-- El sitio público muestra únicamente número y estado; no muestra datos de participantes.
-- El panel utiliza una cuenta previamente autorizada mediante Supabase Auth; las credenciales no se guardan en GitHub.
+- `index.html`: presentación de NÚCLEO, crowdfunding, aportes con Banco Galicia y PayPal, avances y oferta de servicios.
+- `campana.json`: primera meta de financiación y monto confirmado publicado. **`recaudado_confirmado: null` significa "sin cifra verificable publicada", no cero pesos recibidos**. No cargar ingresos no conciliados.
+- `numeros.html`: redirige a la campaña. La numeración ya no se muestra públicamente.
 
-## Páginas
+La campaña **no ofrece números, premios, rifas ni sorteos**. Las contribuciones son voluntarias al desarrollo de un proyecto privado y no otorgan derechos societarios. Los enlaces de pago no se vinculan a participaciones.
 
-- `index.html`: portada, historia, aportes personales independientes y servicios.
-- `numeros.html`: consulta de los 300 números, búsqueda, filtros y estados públicos.
-- `admin.html` + `admin.js`: acceso administrativo protegido, edición manual y herramientas de respaldo.
+## Historial privado anterior
 
-## Respaldos
+Los registros de las participaciones de la etapa anterior **no se borraron**. Se conservan en el esquema privado de Supabase y permanecen accesibles únicamente en el panel `admin.html` / `admin.js`, protegido con Supabase Auth.
 
-1. Los números están en la tabla privada `todo_vuelve.numeros` de Supabase.
-2. `todo_vuelve.historial_completo` guarda las versiones anteriores y nuevas cuando cambia un registro.
-3. `todo_vuelve.copias_seguridad` conserva fotografías completas, privadas, de la numeración. Se generó una copia inicial de 300 registros.
-4. Desde el panel privado, `Crear copia interna` guarda una copia completa adicional dentro de Supabase.
-5. Desde el panel privado, `Descargar respaldo` genera un JSON con los registros visibles. Guardar periódicamente una copia **fuera de Supabase**, en un lugar privado, es indispensable frente a una pérdida total de ese proveedor.
+No alterar ni eliminar pagos, comprobantes, participantes o historial de etapas anteriores para crear esta nueva campaña. Las obligaciones con participantes anteriores se revisan individualmente y se resuelven por separado.
 
-**Importante:** una copia interna en la misma base no reemplaza un respaldo externo independiente.
+## Tecnología y publicación
 
-## Aportes y edición numerada
-
-Los botones de Banco Galicia y PayPal son para aportes personales voluntarios independientes, sin asignar números ni generar derechos a premios. Los montos recibidos no se concilian automáticamente en esta aplicación y deben verificarse con los extractos del banco o de PayPal.
-
-La consulta de números está publicada y operativa, pero **la venta de participaciones pagas permanece deshabilitada** hasta verificar los requisitos legales y las bases definitivas. No deben mezclarse los registros y obligaciones de ediciones anteriores con la numeración nueva.
-
-## Publicación
-
-Cada cambio a la rama `main` activa el despliegue de GitHub Pages. Comprobar el estado en la pestaña Actions del repositorio antes de anunciar una actualización.
-
-No incorporar nombres, teléfonos, comprobantes o contraseñas en este repositorio público.
+- GitHub Pages publica esta web desde la rama `main`.
+- Supabase conserva la información privada histórica, fuera de la campaña pública actual.
+- Las contribuciones por Galicia y PayPal **no se sincronizan automáticamente**: reconciliarlas fuera del sitio antes de reflejar un monto en `campana.json`.
+- El panel privado no fue sustituido ni expuesto.
+- Comprobar el resultado de GitHub Actions y la web pública luego de cada cambio.
+- Nunca añadir credenciales, comprobantes o datos personales a este repositorio público.
