@@ -1,180 +1,25 @@
 <!doctype html>
 <html lang="es-AR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#fff8f4">
-<title>Números | TODO VUELVE</title>
-<meta name="description" content="Consultá la numeración y su estado registrado. Información sincronizada con la base de datos de TODO VUELVE.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TODO VUELVE | Nuestros 300 números">
-<meta property="og:description" content="300 números, un lugar para verlos. Edición en revisión.">
-<meta property="og:image" content="https://caye2404.github.io/recaudacioncaye/caye.png">
-<link rel="canonical" href="https://caye2404.github.io/todo-vuelve/numeros.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#112d27">
+<meta http-equiv="refresh" content="0;url=./">
+<link rel="canonical" href="https://caye2404.github.io/todo-vuelve/">
+<title>TODO VUELVE · Ahora apoyamos NÚCLEO</title>
 <style>
-:root{--bg:#fff9f6;--blush:#f7e7e6;--plum:#442d3b;--rose:#aa5369;--line:#e8d2d6;--muted:#77626c;--white:#fff;--occupied:#c0a9b0}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);font:400 15px/1.6 "DM Sans",sans-serif;color:var(--plum)}
-a{color:inherit}button,input,select{font:inherit}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a44965;outline-offset:3px}
-.container{max-width:1140px;margin:auto;padding:0 22px}
-.top{background:#fff;border-bottom:1px solid var(--line)}
-.top .container{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{text-decoration:none;font-size:15px;letter-spacing:.16em;font-weight:700;color:var(--plum)}
-.logo span{color:var(--rose)}
-.nav{display:flex;align-items:center;gap:19px}
-.nav a{text-decoration:none;font-weight:650;font-size:12px;color:#775361}
-.nav .pill{border:1px solid #d9a7b5;border-radius:50px;padding:9px 14px}
-.hero{background:radial-gradient(ellipse at right top,#f0cad1,transparent 48%),linear-gradient(135deg,#fffbf8,#f8e9e7);padding:58px 0 50px;border-bottom:1px solid #eed8da}
-.kicker{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:11px;font-weight:700;color:var(--rose)}
-h1,h2{font-family:"Playfair Display",Georgia,serif;letter-spacing:-.035em}
-h1{font-size:clamp(48px,8vw,85px);line-height:1.03;margin:13px 0;color:var(--plum)}
-h1 em{font-style:normal;color:var(--rose)}
-.lead{font-size:18px;max-width:690px;color:#755c69;margin:0}
-.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:30px 0 18px}
-.stat{border-radius:14px;background:#fff;box-shadow:0 8px 24px #6730440a;padding:20px;border:1px solid #ead5d7}
-.stat strong{display:block;font:600 32px/1.2 "Playfair Display",serif;color:#6a364a}
-.stat span{font-size:12px;color:#8b6c7c}
-.alert{background:#fff3ee;border:1px solid #e9c7cd;border-radius:12px;padding:17px 21px;color:#775160;font-size:13px;line-height:1.7}
-main{padding:38px 0 90px}
-.toolbar{display:grid;grid-template-columns:minmax(120px,1fr) minmax(150px,190px) auto;gap:12px;align-items:end;margin:22px 0 13px}
-label{display:block;font-size:12px;font-weight:700;color:#604653;margin:0 0 8px}
-input,select{width:100%;height:47px;padding:0 14px;border:1px solid #d6b9c1;border-radius:10px;background:#fff;color:#47313e}
-button{cursor:pointer;border:0;border-radius:10px;min-height:47px;padding:12px 16px;background:var(--plum);color:#fff;font-weight:700}
-button:hover{background:#693f53}
-button:disabled{cursor:not-allowed;opacity:.55}
-.secondary{background:transparent;border:1px solid #bd8796;color:#824057}
-.secondary:hover{background:#fbe4e9}
-.status{color:#845369;min-height:25px;margin:14px 0;font-size:13px;font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px}
-.tile{border:1px solid #e5cdd4;border-radius:10px;min-width:0;min-height:56px;padding:8px 1px;font-size:13px;background:#fff;color:#66384b;box-shadow:0 4px 15px #5c22300a;display:flex;align-items:center;justify-content:center;transition:.15s}
-.tile:hover{transform:translateY(-2px);background:#fff0f3;border-color:#c8758f}
-.tile:focus-visible{position:relative;z-index:1}
-.tile.reservado{background:#f8e4cf;border-color:#e8bd86;color:#744d2b}
-.tile.pagado{background:#e6e8e5;border-color:#bdc4be;color:#657168}
-.tile.anulado{background:#f1e8ea;border-color:#d0bec4;color:#957d86}
-.tile.selected{outline:3px solid #9e4661;outline-offset:-3px}
-.legend{display:flex;flex-wrap:wrap;gap:16px;margin:19px 0 26px;font-size:12px;color:#765865}
-.legend-item{display:flex;align-items:center;gap:7px}
-.dot{width:12px;height:12px;border-radius:4px;display:inline-block;background:white;border:1px solid #bd92a0}
-.dot.r{background:#f8e4cf;border-color:#e8bd86}.dot.p{background:#e6e8e5;border-color:#bdc4be}.dot.a{background:#f1e8ea;border-color:#d0bec4}
-.inspector{background:var(--plum);color:#fffaf7;padding:24px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:24px}
-.inspector h2{color:#ffe2e7;font-size:26px;margin:4px 0}
-.inspector p{color:#e1cbd4;font-size:13px;max-width:660px;margin:0;line-height:1.6}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.inspector button{background:#f5d4dc;color:#492b3a}
-.extra{margin-top:45px;padding-top:24px;border-top:1px solid #ead4d8;color:#7b606b;font-size:13px}
-.extra a{color:#9b435b;font-weight:700}
-footer{background:#32202c;color:#e4ced6;padding:25px 0;font-size:12px}
-footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:880px){.grid{grid-template-columns:repeat(10,minmax(0,1fr))}.summary{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:630px){.top .container{min-height:64px}.nav{gap:10px}.nav a:first-child{display:none}.hero{padding:45px 0 34px}.lead{font-size:15px}.summary{gap:9px}.stat{padding:15px}.stat strong{font-size:25px}.toolbar{grid-template-columns:1fr 1fr}.toolbar .update{grid-column:span 2}.grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}.tile{min-height:53px;font-size:12px}.inspector{display:block}.actions{margin-top:15px}.actions button{width:100%}}
-@media(prefers-reduced-motion:reduce){.tile{transition:none}}
+*{box-sizing:border-box}body{font:16px/1.7 system-ui,sans-serif;background:#112d27;color:#f5f8ee;display:grid;place-items:center;min-height:100vh;margin:0;padding:25px;text-align:center}
+main{max-width:560px}h1{font-size:36px;line-height:1.2;margin:0 0 15px}p{color:#d9e6d9}a{color:#d9f3bd;font-weight:700}
 </style>
+<script>window.location.replace("./");</script>
 </head>
 <body>
-<header class="top"><div class="container">
-<a class="logo" href="./">TODO <span>VUELVE.</span></a>
-<nav class="nav" aria-label="Principal">
-<a href="./#historia">Mi historia</a>
-<a href="./#apoyar">Acompañar ♥</a>
-<a class="pill" href="./admin.html">Acceso privado</a>
-</nav>
-</div></header>
-<section class="hero"><div class="container">
-<span class="kicker">Edición 2026 · Estado en línea</span>
-<h1>Nuestros <em>números.</em></h1>
-<p class="lead">Un espacio claro para consultar los estados del 001 al 300. La información se actualiza directamente desde nuestra base de datos, sin planillas que se pierden.</p>
-<div class="summary" aria-label="Resumen">
-<div class="stat"><strong id="statTotal">300</strong><span>Numeración total</span></div>
-<div class="stat"><strong id="statFree">—</strong><span>Sin asignar</span></div>
-<div class="stat"><strong id="statBusy">—</strong><span>Reservados</span></div>
-<div class="stat"><strong id="statPaid">—</strong><span>Registrados como pagados</span></div>
-</div>
-<div class="alert"><strong>Edición numerada cerrada.</strong> Los números se muestran para consulta. Esta página no realiza ventas ni recibe pagos.</div>
-</div></section>
-<main><div class="container">
-<div class="toolbar">
-<div><label for="buscar">Buscar número</label><input id="buscar" inputmode="numeric" maxlength="3" placeholder="Ej.: 024" autocomplete="off"></div>
-<div><label for="filtro">Mostrar estado</label><select id="filtro"><option value="todos">Todos</option><option value="disponible">Sin asignar</option><option value="reservado">Reservados</option><option value="pagado">Pagados</option><option value="anulado">Anulados</option></select></div>
-<button type="button" class="secondary update" id="actualizar">↻ Actualizar</button>
-</div>
-<div id="estado" class="status" role="status" aria-live="polite">Conectando con Supabase…</div>
-<div class="grid" id="cuadricula" aria-label="Números guardados en Supabase"></div>
-<div class="legend" aria-label="Referencias">
-<div class="legend-item"><span class="dot"></span> Sin asignar</div>
-<div class="legend-item"><span class="dot r"></span> Reservado</div>
-<div class="legend-item"><span class="dot p"></span> Pagado</div>
-<div class="legend-item"><span class="dot a"></span> Anulado</div>
-</div>
-<section id="detalle" class="inspector" hidden>
-<div><span class="kicker" style="color:#ecbac9">Detalle del registro</span><h2 id="detalleTitulo">Número 001</h2><p id="detalleTexto"></p></div>
-<div class="actions"><button type="button" id="copiarNumero">Copiar número</button></div>
-</section>
-<p class="extra">¿Tenés una participación de la edición anterior? <a href="https://wa.me/5491126830194?text=Hola%20Caye.%20Quiero%20revisar%20mi%20participacion%20anterior." target="_blank" rel="noopener noreferrer">Escribime para revisarla</a>. Para administrar las asignaciones y registrar comprobantes, usá el <a href="./admin.html">panel privado</a>. Los datos personales no se muestran en esta página.</p>
-</div></main>
-<footer><div class="container"><span>© 2026 TODO VUELVE · Villa La Angostura</span><a href="./">Volver a la portada</a></div></footer>
-<script>
-"use strict";
-const $=id=>document.getElementById(id);
-const api="https://kytneqghybtvkgsitkbm.supabase.co/rest/v1/todo_vuelve_estado_publico?select=numero,estado&order=numero.asc&limit=300";
-const key="sb_publishable_k6IdQGtHMZxvGn_beWu8Rg_zm4CFy1R";
-let registros=[],elegido=null,cargando=false;
-const states={disponible:"Sin asignar",reservado:"Reservado",pagado:"Pagado",anulado:"Anulado"};
-function mensaje(texto){$("estado").textContent=texto}
-function ocultar(){elegido=null;$("detalle").hidden=true}
-function detalle(reg){
- elegido=reg.numero;$("detalle").hidden=false;
- $("detalleTitulo").textContent="Número "+String(reg.numero).padStart(3,"0");
- $("detalleTexto").textContent="Estado registrado: "+states[reg.estado]+". Esta consulta no constituye una reserva ni habilita el pago de participaciones.";
- for(const e of document.querySelectorAll(".tile.selected"))e.classList.remove("selected");
- const t=document.getElementById("n-"+reg.numero);if(t)t.classList.add("selected");
-}
-function render(){
- const txt=$("buscar").value.trim().replace(/[^0-9]/g,""), filtro=$("filtro").value;
- const filas=registros.filter(r=>(filtro==="todos"||r.estado===filtro)&&(!txt||String(r.numero).padStart(3,"0").includes(txt)));
- const fragment=document.createDocumentFragment();
- for(const reg of filas){
-   const btn=document.createElement("button");btn.type="button";btn.className="tile "+reg.estado;
-   btn.id="n-"+reg.numero;btn.textContent=String(reg.numero).padStart(3,"0");
-   btn.title=String(reg.numero).padStart(3,"0")+": "+states[reg.estado];
-   btn.setAttribute("aria-label",btn.title);btn.setAttribute("aria-pressed",String(elegido===reg.numero));
-   if(elegido===reg.numero)btn.classList.add("selected");
-   btn.addEventListener("click",()=>detalle(reg));
-   fragment.appendChild(btn);
- }
- $("cuadricula").replaceChildren(fragment);
- mensaje(filas.length+" números mostrados · Datos sincronizados · Participaciones cerradas");
- if(!filas.some(x=>x.numero===elegido))ocultar();
-}
-async function cargar(){
- if(cargando)return;cargando=true;$("actualizar").disabled=true;mensaje("Consultando los números…");
- try{
-   const r=await fetch(api,{headers:{apikey:key},cache:"no-store"});
-   if(!r.ok)throw new Error("No se pudo consultar la base");
-   const lista=await r.json();
-   if(!Array.isArray(lista)||lista.length!==300||new Set(lista.map(x=>x.numero)).size!==300||lista.some(x=>!Number.isInteger(x.numero)||x.numero<1||x.numero>300||!Object.hasOwn(states,x.estado)))throw Error("Numeración incompleta");
-   registros=lista;
-   $("statTotal").textContent=lista.length;
-   $("statFree").textContent=lista.filter(x=>x.estado==="disponible").length;
-   $("statBusy").textContent=lista.filter(x=>x.estado==="reservado").length;
-   $("statPaid").textContent=lista.filter(x=>x.estado==="pagado").length;
-   render();
- }catch(err){
-   registros=[];elegido=null;$("cuadricula").replaceChildren();
-   $("statTotal").textContent="—";$("statFree").textContent="—";$("statBusy").textContent="—";$("statPaid").textContent="—";
-   $("detalle").hidden=true;mensaje("No se pudo verificar la numeración. Ningún número se considera disponible.");
- }finally{cargando=false;$("actualizar").disabled=false}
-}
-$("buscar").addEventListener("input",render);
-$("filtro").addEventListener("change",render);
-$("actualizar").addEventListener("click",cargar);
-$("copiarNumero").addEventListener("click",async()=>{
- if(elegido===null)return;const n=String(elegido).padStart(3,"0");
- try{await navigator.clipboard.writeText(n);$("copiarNumero").textContent="¡Número copiado!"}
- catch{$("copiarNumero").textContent="Número "+n}
-});
-cargar();
-</script>
-</body></html>
+<main>
+<h1>TODO VUELVE ahora impulsa NÚCLEO.</h1>
+<p>La campaña pública se transformó en un crowdfunding para desarrollar una herramienta que ayude a pequeños negocios. No hay números ni premios en esta nueva etapa.</p>
+<p><a href="./">Ir a la campaña actual</a></p>
+<p>¿Tenías una participación anterior? <a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20revisar%20mi%20participacion%20anterior.">Escribime para revisarla en privado</a>.</p>
+</main>
+</body>
+</html>
