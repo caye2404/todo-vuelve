@@ -1,6 +1,5 @@
 {
-  "objetivo": 300000,
   "recaudado_confirmado": null,
   "ultima_actualizacion": null,
-  "nota": "Meta inicial orientativa. Recaudación se publica solo después de verificar aportes recibidos por Galicia y PayPal. Null significa no disponible, no cero."
+  "nota": "Sin meta monetaria fija. El valor null significa que no hay una cifra de ingresos verificada para publicar; no equivale a $0 recibido. Actualizar solamente con depósitos y pagos conciliados."
 }
