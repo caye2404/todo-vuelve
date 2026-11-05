@@ -11,7 +11,7 @@ La etapa pública de TODO VUELVE impulsa el desarrollo de **NÚCLEO**, una herra
 ## Sitio público
 
 - `index.html`: presentación de NÚCLEO, crowdfunding, aportes con Banco Galicia y PayPal, avances y oferta de servicios.
-- `campana.json`: primera meta de financiación y monto confirmado publicado. **`recaudado_confirmado: null` significa "sin cifra verificable publicada", no cero pesos recibidos**. No cargar ingresos no conciliados.
+- `campana.json`: importe de **recaudación confirmada**, sin meta fija. **`recaudado_confirmado: null` significa "sin cifra verificable publicada", no cero pesos recibidos**. No cargar ingresos no conciliados. La barra es un recurso visual de crecimiento con escala abierta; **no representa un porcentaje ni un objetivo en pesos**.
 - `numeros.html`: redirige a la campaña. La numeración ya no se muestra públicamente.
 
 La campaña **no ofrece números, premios, rifas ni sorteos**. Las contribuciones son voluntarias al desarrollo de un proyecto privado y no otorgan derechos societarios. Los enlaces de pago no se vinculan a participaciones.
