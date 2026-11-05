@@ -121,7 +121,7 @@ footer{background:var(--forest);color:#d9e9de;padding:38px 0}.foot{display:flex;
         </div>
         <h3>Transferencia bancaria</h3>
         <p>Podés colaborar por transferencia desde tu banco o billetera virtual. Elegís vos cuánto aportar.</p>
-        <div class="aliasbox"><small>Alias · Banco Galicia</small><strong>caye2400</strong></div>
+        <div class="aliasbox"><small>Alias · Banco Galicia</small><strong>caye2000</strong></div>
         <button id="copyAlias" type="button" class="btn btn-dark">COPIAR ALIAS ↗</button>
         <div id="copyFeedback" class="feedback" role="status" aria-live="polite"></div>
         <p class="fine">Titular: Cayetano Raúl Benítez. Verificá el titular antes de transferir.</p>
@@ -193,9 +193,9 @@ footer{background:var(--forest);color:#d9e9de;padding:38px 0}.foot{display:flex;
   var alias=document.getElementById("copyAlias"), feedback=document.getElementById("copyFeedback");
   alias.addEventListener("click",async function(){
     var ok=false;
-    try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText("caye2400");ok=true}}catch(e){}
-    if(!ok){var t=document.createElement("textarea");t.value="caye2400";t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}
-    feedback.textContent=ok?"Alias copiado. Verificá el titular antes de transferir.":"Copiá manualmente: caye2400";
+    try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText("caye2000");ok=true}}catch(e){}
+    if(!ok){var t=document.createElement("textarea");t.value="caye2000";t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}
+    feedback.textContent=ok?"Alias copiado. Verificá el titular antes de transferir.":"Copiá manualmente: caye2000";
     if(ok)alias.textContent="✓ ALIAS COPIADO";
   });
   var photo=document.getElementById("portrait"),retries=0;
