@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#112d27">
-<meta name="description" content="TODO VUELVE: crowdfunding para hacer crecer NÚCLEO, una herramienta para simplificar la administración de pequeños negocios. Apoyá el proyecto o contratá los servicios de CayeLab.">
+<meta name="description" content="TODO VUELVE: conocé el desarrollo real de NÚCLEO, el software de gestión que Caye está creando desde la Patagonia para emprendedores y PyMEs. Explorá los avances, aportá ideas, apoyá el proyecto o conocé CayeLab.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TODO VUELVE · Hagamos crecer NÚCLEO">
-<meta property="og:description" content="De un problema real nació una solución. Sumate a impulsar NÚCLEO o conocé mis servicios de tecnología y automatización.">
+<meta property="og:description" content="NÚCLEO ya tiene un prototipo privado: proveedores, documentos, vencimientos, pagos y control. Conocé el camino, aportá ideas y apoyá su desarrollo desde TODO VUELVE y CayeLab.">
 <meta property="og:image" content="https://caye2404.github.io/recaudacioncaye/caye.png">
 <meta property="og:url" content="https://caye2404.github.io/todo-vuelve/">
 <meta name="twitter:card" content="summary_large_image">
@@ -160,6 +160,35 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
   .fundcard{padding:25px 20px}
   .donatecard{padding:23px}
 }
+
+/* Nuevas secciones · NÚCLEO, bitácora y comunidad */
+.progress-section{background:#0f1721}
+.progress-grid,.journey-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+.progress-card,.journey-card{padding:30px;border:1px solid #3a4859;background:#18222e;border-radius:19px}
+.progress-top{font:800 12px/1.4 Manrope,sans-serif;letter-spacing:.12em;color:#baf28c}
+.progress-card h3,.journey-card h3{font:700 23px/1.3 Manrope,sans-serif;color:#f6f9ff;margin:17px 0 13px}
+.progress-card p,.journey-card p{color:#cbd6e1;font-size:17px;line-height:1.75;margin:0}
+.progress-card strong{color:#dffbc9}
+.progress-note{margin-top:23px;border:1px solid #789b76;border-radius:13px;background:#192c25;color:#d5e8d9;padding:22px 25px;font-size:16px}
+.progress-note strong{color:#d5ffc1}
+.journey-section{background:#0b1019}
+.journey-card{background:#151d27}
+.journey-card h3{margin-top:0}
+.journey-action{display:flex;align-items:center;gap:28px;justify-content:space-between;margin-top:27px;padding:26px;border-radius:17px;background:#203129;border:1px solid #476b50}
+.journey-action p{margin:0;color:#d9e7d9;max-width:740px}
+.journey-action .btn{flex-shrink:0}
+.community-section{background:radial-gradient(ellipse at 10% 15%,#284837,#14231d 52%,#0b1516 100%)}
+.community-section .section h2,.community-section h2{color:#f8fff8}
+.community-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:36px 0}
+.community-grid>div{background:#ffffff0c;border:1px solid #a6d6aa5c;border-radius:15px;padding:24px}
+.community-grid strong{display:block;color:#d8ffb7;font-size:18px;line-height:1.4}
+.community-grid span{display:block;color:#d9e6dd;font-size:15px;line-height:1.65;margin-top:10px}
+.community-actions{display:flex;flex-wrap:wrap;gap:13px}
+.project-section .two-col>div:first-child p.muted{font-size:17px;line-height:1.75;color:#cbd6e1}
+.project-section .two-col>div:first-child p.muted strong{color:#d5ffc1}
+@media(max-width:920px){.community-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-action{align-items:flex-start;flex-direction:column}}
+@media(max-width:720px){.progress-grid,.journey-grid,.community-grid{grid-template-columns:1fr}.progress-card,.journey-card{padding:24px}.community-grid{gap:12px}.community-grid>div{padding:21px}.journey-action{padding:23px}.progress-card h3,.journey-card h3{font-size:21px}}
+
 </style>
 </head>
 <body>
@@ -169,7 +198,8 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
     <a class="brand" href="./" aria-label="TODO VUELVE, inicio">TODO <span>VUELVE.</span></a>
     <nav class="navlinks" aria-label="Navegación">
       <a href="#nucleo">NÚCLEO</a>
-      <a href="#servicios">Mis servicios</a>
+      <a href="#avances">Avances</a>
+      <a href="#servicios">CayeLab</a>
       <a href="#historia">Mi historia</a>
       <a class="navcta" href="#aportar">Apoyar el proyecto</a>
     </nav>
@@ -181,13 +211,14 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
     <div>
       <span class="eyebrow">CROWDFUNDING INDEPENDIENTE · NÚCLEO</span>
       <h1>Las buenas ideas <em>merecen crecer.</em></h1>
-      <p class="herolead">Estoy construyendo NÚCLEO: un sistema para que los pequeños negocios tengan más control y menos caos administrativo.</p>
-      <p class="herosub">Nació de problemas que conozco de primera mano: facturas, proveedores, pagos y planillas por todos lados. Hoy quiero llevar esa experiencia a una solución útil, accesible y hecha para quienes emprenden.</p>
+      <p class="herolead">Estoy desarrollando NÚCLEO, un software de gestión nacido de problemas reales para que emprendedores y PyMEs administren mejor su negocio.</p>
+      <p class="herosub">Ya hay un prototipo privado y una aplicación en pruebas: proveedores, facturas, remitos, cuentas corrientes, vencimientos, comprobantes y controles administrativos. Comparto lo que construyo, lo que falta y cómo podés sumarte. Mi objetivo es que NÚCLEO llegue a ser de código abierto.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#aportar">♡ APOYAR NÚCLEO</a>
-        <a class="btn btn-outline" href="#servicios">CONTRATAR MIS SERVICIOS</a>
+        <a class="btn btn-outline" href="#avances">VER LOS AVANCES REALES</a>
+        <a class="btn btn-outline" href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">CONOCER CAYELAB ↗</a>
       </div>
-      <div class="herofoot"><span>Un proyecto real, en desarrollo</span><span>Desde Villa La Angostura</span><span>Con tu apoyo, más lejos</span></div>
+      <div class="herofoot"><span>Prototipo privado en pruebas</span><span>Desde Villa La Angostura</span><span>Código abierto: objetivo futuro</span></div>
     </div>
     <div class="portrait">
       <img id="portrait" src="https://caye2404.github.io/recaudacioncaye/caye.png" alt="Retrato de Cayetano, creador de NÚCLEO y CayeLab" fetchpriority="high" width="400" height="470">
@@ -217,25 +248,90 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 <section class="section project-section" id="nucleo">
   <div class="wrap two-col">
     <div>
-      <span class="eyebrow dark">¿QUÉ ESTAMOS CONSTRUYENDO?</span>
-      <h2>Un NÚCLEO para administrar mejor.</h2>
-      <p class="statement">Menos horas ordenando planillas. Más tiempo haciendo crecer tu negocio.</p>
-      <p class="muted">La idea es reunir en una plataforma web la información que hoy muchos emprendedores tienen dispersa. Empezamos por el control de proveedores y pagos, sin reemplazar a los sistemas de facturación.</p>
-      <a class="btn btn-dark" href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20quiero%20conocer%20N%C3%9ACLEO%20y%20sus%20pruebas%20para%20negocios." target="_blank" rel="noopener noreferrer">QUIERO CONOCER NÚCLEO ↗</a>
+      <span class="eyebrow dark">NÚCLEO · SOFTWARE EN DESARROLLO</span>
+      <h2>Menos planillas sueltas. Más control de tu negocio.</h2>
+      <p class="statement">Nació del trabajo de todos los días, no de una idea de escritorio.</p>
+      <p class="muted">Trabajo en gastronomía, tecnología y administración. Vi de cerca lo difícil que es encontrar un remito, saber qué proveedor está pendiente, seguir un pago o reunir información que vive en distintas planillas y carpetas. Por eso empecé a crear NÚCLEO: una plataforma web que conecta piezas del trabajo administrativo en un mismo lugar.</p>
+      <p class="muted">NÚCLEO <strong>complementa</strong> los sistemas contables y de facturación; no pretende reemplazarlos. Hoy está en <strong>desarrollo y pruebas privadas</strong>, no es un producto abierto para registrarse libremente.</p>
+      <a class="btn btn-dark" href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20quiero%20conocer%20N%C3%9ACLEO%2C%20aportar%20ideas%20o%20sumarme%20a%20una%20prueba." target="_blank" rel="noopener noreferrer">QUIERO CONOCER NÚCLEO ↗</a>
     </div>
     <div class="features">
-      <article class="feature"><span class="symbol">01</span><h3>Proveedores y facturas</h3><p>Un lugar para registrar lo que llega, controlar deudas y evitar que una factura se pierda.</p></article>
-      <article class="feature"><span class="symbol">02</span><h3>Vencimientos y pagos</h3><p>Ver qué hay que pagar, cuánto se abonó y qué saldo queda pendiente.</p></article>
-      <article class="feature"><span class="symbol">03</span><h3>Control y conciliación</h3><p>Herramientas para revisar movimientos y reducir cruces manuales repetitivos.</p></article>
-      <article class="feature"><span class="symbol">04</span><h3>Web y celular</h3><p>La meta es que el negocio pueda consultar su administración desde cualquier lugar.</p></article>
+      <article class="feature"><span class="symbol">01</span><h3>Proveedores y documentos</h3><p>Fichas por proveedor, facturas, remitos, comprobantes y referencias a archivos guardados con sus permisos.</p></article>
+      <article class="feature"><span class="symbol">02</span><h3>Pantallazo de obligaciones</h3><p>Vista de facturas, vencimientos, estados y pendientes para priorizar el trabajo diario.</p></article>
+      <article class="feature"><span class="symbol">03</span><h3>Pagos y seguimiento</h3><p>Consultas del historial de pagos y registro controlado de pagos completos, manteniendo trazabilidad.</p></article>
+      <article class="feature"><span class="symbol">04</span><h3>Cuentas corrientes</h3><p>El objetivo es reunir cargos, remitos, notas de crédito, anticipos y saldos por proveedor sin mezclar conceptos.</p></article>
+      <article class="feature"><span class="symbol">05</span><h3>Control de caja y adelantos</h3><p>Movimientos de caja y adelantos integrados a un espacio administrativo con permisos.</p></article>
+      <article class="feature"><span class="symbol">06</span><h3>Tesorería y tarjetas</h3><p>Seguimiento de vouchers, QR y acreditaciones estimadas. Las proyecciones no se presentan como depósitos confirmados.</p></article>
+      <article class="feature"><span class="symbol">07</span><h3>Alertas e historial</h3><p>Controles de datos faltantes, documentos por revisar, actividad y auditoría para detectar errores antes.</p></article>
+      <article class="feature"><span class="symbol">08</span><h3>PC y celular</h3><p>Experiencia web adaptable, con pruebas de instalación como aplicación y accesos según el rol de cada persona.</p></article>
     </div>
+  </div>
+</section>
+<section class="section progress-section" id="avances">
+  <div class="wrap">
+    <span class="eyebrow dark">BITÁCORA DEL PROYECTO · NOVIEMBRE 2026</span>
+    <h2>Qué está hecho. Qué estamos probando. Qué sigue.</h2>
+    <p class="lead">Prefiero mostrar avances reales y límites claros, antes que prometer funciones terminadas que todavía necesitan pruebas. Estas son las etapas de NÚCLEO.</p>
+    <div class="progress-grid">
+      <article class="progress-card">
+        <div class="progress-top">01 · BASE CONSTRUIDA</div>
+        <h3>Un producto que ya se puede recorrer</h3>
+        <p>Interfaz web privada, autenticación, espacios de trabajo, permisos por usuario, pantallas administrativas e integración con Supabase. El desarrollo tiene repositorio versionado, controles de código y una versión instalable en pruebas.</p>
+      </article>
+      <article class="progress-card">
+        <div class="progress-top">02 · MÓDULOS EN VALIDACIÓN</div>
+        <h3>Datos y documentos conectados</h3>
+        <p>Vistas de proveedores, expedientes de Drive, Pantallazo, historial documental, recepción de facturas PDF y Tesorería. Algunas funciones ya tienen controles técnicos; otras requieren pruebas completas con usuarios, PC y celular.</p>
+      </article>
+      <article class="progress-card">
+        <div class="progress-top">03 · PRÓXIMOS DESAFÍOS</div>
+        <h3>Conciliación de verdad, no estimaciones</h3>
+        <p>Completar cuentas corrientes con remitos y pagos parciales, vincular cada pago con su factura, contrastar liquidaciones con movimientos bancarios reales, sumar cierres operativos y hacer más simple el uso cotidiano.</p>
+      </article>
+      <article class="progress-card">
+        <div class="progress-top">04 · VISIÓN DE FUTURO</div>
+        <h3>Una herramienta abierta y colaborativa</h3>
+        <p>Quiero documentar el proyecto, recibir mejoras y preparar una versión de código abierto que puedan adaptar emprendedores, técnicos y pequeñas empresas. <strong>Esto es un objetivo futuro: NÚCLEO todavía no se ofrece como software abierto.</strong></p>
+      </article>
+    </div>
+    <div class="progress-note"><strong>Un principio importante:</strong> las fuentes originales, los comprobantes y los datos reales de los negocios se mantienen privados. Una proyección no equivale a un pago conciliado y un prototipo no equivale a un sistema terminado.</div>
+  </div>
+</section>
+<section class="section journey-section" id="lo-que-hago">
+  <div class="wrap">
+    <span class="eyebrow dark">DE MI EXPERIENCIA A SOLUCIONES REALES</span>
+    <h2>Todo lo que estoy construyendo alrededor de NÚCLEO.</h2>
+    <p class="lead">No estoy trabajando solamente en un software. Estoy aplicando lo que sé de gastronomía, soporte IT, desarrollo web y gestión administrativa para resolver problemas que encuentro en el día a día.</p>
+    <div class="journey-grid">
+      <article class="journey-card"><h3>Gestión administrativa</h3><p>Organización de proveedores, documentación, cuentas corrientes, fechas de pago, caja, controles, cierres y reportes útiles para tomar decisiones.</p></article>
+      <article class="journey-card"><h3>Automatizaciones y datos</h3><p>Conexión entre planillas, documentos y aplicaciones; reducción de tareas repetitivas; orden del historial y seguimiento de errores.</p></article>
+      <article class="journey-card"><h3>Reservas y gastronomía</h3><p>Sistemas web de reservas, vistas rápidas para equipos de salón, gestión de disponibilidad y experiencias digitales pensadas para trabajar durante el servicio.</p></article>
+      <article class="journey-card"><h3>Desarrollo web y CayeLab</h3><p>Sitios para negocios, formularios, páginas de presentación, herramientas de trabajo y propuestas digitales que se puedan usar de verdad.</p></article>
+      <article class="journey-card"><h3>Soporte e infraestructura IT</h3><p>Computadoras, redes, impresoras, acceso a sistemas y resolución práctica de problemas técnicos en operaciones reales.</p></article>
+      <article class="journey-card"><h3>Aprender, documentar y mejorar</h3><p>Pruebas, errores, ajustes de interfaz, seguridad, versiones y aprendizaje continuo. Muestro el proceso, no solamente una foto del resultado.</p></article>
+    </div>
+    <div class="journey-action"><p><strong>CayeLab</strong> es el espacio donde reúno mis servicios y desarrollos. Si tenés un negocio, un problema administrativo o una idea para convertir en herramienta, hablemos.</p><a class="btn btn-dark" href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">VISITAR CAYELAB ↗</a></div>
+  </div>
+</section>
+<section class="section community-section" id="sumarte">
+  <div class="wrap">
+    <span class="eyebrow dark">NO HACE FALTA SER PROGRAMADOR</span>
+    <h2>¿Querés ser parte de lo que viene?</h2>
+    <p class="lead">NÚCLEO puede crecer con experiencias reales, preguntas difíciles y personas que quieran aportar. Si sos emprendedor, llevás una PyME, administrás un comercio o desarrollás software, tu mirada sirve.</p>
+    <div class="community-grid">
+      <div><strong>Contame un problema</strong><span>¿Qué parte de tu administración te quita tiempo?</span></div>
+      <div><strong>Probá y opiná</strong><span>Podés consultar por futuras pruebas privadas y aportar devoluciones.</span></div>
+      <div><strong>Sumá conocimiento</strong><span>Ideas de producto, experiencia en desarrollo, seguridad, diseño o procesos.</span></div>
+      <div><strong>Compartí o colaborá</strong><span>Difundir el proyecto o donar también ayuda a sostenerlo.</span></div>
+    </div>
+    <div class="community-actions"><a class="btn btn-primary" href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20vi%20TODO%20VUELVE%20y%20quiero%20aportar%20una%20idea%20para%20N%C3%9ACLEO." target="_blank" rel="noopener noreferrer">QUIERO APORTAR UNA IDEA ↗</a><a class="btn btn-outline" href="#aportar">QUIERO APOYAR EL DESARROLLO</a></div>
   </div>
 </section>
 <section class="section donate-section" id="aportar">
   <div class="wrap">
     <span class="eyebrow dark">TU APORTE IMPULSA EL PROYECTO</span>
     <h2>Una mano hoy.<br>Una herramienta mejor mañana.</h2>
-    <p class="lead">Si creés en la idea, podés colaborar con el monto que elijas. Hay dos maneras sencillas de apoyar el desarrollo de NÚCLEO.</p>
+    <p class="lead">NÚCLEO es un proyecto independiente que hoy sostengo con trabajo, aprendizaje y recursos propios. Tu aporte voluntario ayuda a dedicar tiempo al desarrollo, probar funciones con negocios reales, mejorar la seguridad y preparar documentación para una futura apertura del código. Podés colaborar con el monto que elijas.</p>
     <div class="donate-grid">
       <article class="donatecard">
         <div class="cardtop">
@@ -264,9 +360,9 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
       </article>
     </div>
     <div class="use" aria-label="En qué se enfocará el apoyo">
-      <div class="usebox"><strong>Desarrollo del producto</strong><span>Mejoras de interfaz, seguridad y funciones administrativas.</span></div>
-      <div class="usebox"><strong>Pruebas con negocios reales</strong><span>Validación, ajustes y acompañamiento a los primeros usuarios.</span></div>
-      <div class="usebox"><strong>Lanzamiento y crecimiento</strong><span>Infraestructura, documentación y difusión del proyecto.</span></div>
+      <div class="usebox"><strong>Desarrollo del producto</strong><span>Interfaz usable en celular y PC, cuentas corrientes, pruebas, seguridad y mejoras concretas.</span></div>
+      <div class="usebox"><strong>Pruebas con negocios reales</strong><span>Validación de datos y flujos sin exponer información privada de los comercios.</span></div>
+      <div class="usebox"><strong>Documentación y comunidad</strong><span>Infraestructura, material explicativo, pilotos y preparación de un futuro proyecto abierto.</span></div>
     </div>
   </div>
 </section>
@@ -274,11 +370,11 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
   <div class="wrap">
     <span class="eyebrow dark">TAMBIÉN PODÉS APOYARME CONTRATÁNDOME</span>
     <h2>Hago tecnología que<br>resuelve problemas reales.</h2>
-    <p class="lead">Además de crear NÚCLEO, trabajo con CayeLab ofreciendo servicios para personas, emprendedores y comercios. Si necesitás una solución, podemos desarrollarla juntos.</p>
+    <p class="lead">CayeLab es mi espacio de soluciones digitales. Además de NÚCLEO, desarrollo herramientas para gastronomía y PyMEs, páginas web, sistemas de reservas, automatizaciones y soporte técnico. Si necesitás resolver algo concreto, podemos trabajar juntos.</p>
     <div class="service-grid">
-      <article class="service"><span class="mark">CAYELAB / 01</span><h3>Páginas web</h3><p>Sitios profesionales, páginas para emprendimientos, cartas digitales, formularios y soluciones web.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20una%20pagina%20web%20y%20quiero%20consultar%20por%20CayeLab." target="_blank" rel="noopener noreferrer">Consultar por una web ↗</a></article>
-      <article class="service"><span class="mark">CAYELAB / 02</span><h3>Soporte IT</h3><p>Ayuda con computadoras, redes, impresoras y problemas técnicos que frenan tu trabajo.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20ayuda%20con%20soporte%20IT." target="_blank" rel="noopener noreferrer">Consultar soporte ↗</a></article>
-      <article class="service"><span class="mark">CAYELAB / 03</span><h3>Orden y automatización</h3><p>Planillas, procesos administrativos y herramientas para ahorrar tiempo en tu negocio.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20quiero%20ordenar%20o%20automatizar%20la%20administracion%20de%20mi%20negocio." target="_blank" rel="noopener noreferrer">Hablemos de tu negocio ↗</a></article>
+      <article class="service"><span class="mark">CAYELAB / 01</span><h3>Páginas web</h3><p>Sitios profesionales, cartas digitales, formularios, páginas para emprendimientos y sistemas de reservas pensados para usuarios reales.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20una%20pagina%20web%20y%20quiero%20consultar%20por%20CayeLab." target="_blank" rel="noopener noreferrer">Consultar por una web ↗</a></article>
+      <article class="service"><span class="mark">CAYELAB / 02</span><h3>Soporte IT</h3><p>Soporte de computadoras, redes, impresoras, conexiones y sistemas que sostienen la operación de un negocio.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20ayuda%20con%20soporte%20IT." target="_blank" rel="noopener noreferrer">Consultar soporte ↗</a></article>
+      <article class="service"><span class="mark">CAYELAB / 03</span><h3>Orden y automatización</h3><p>Organización de planillas, proveedores, compras, pagos, reportes y automatizaciones para reducir trabajo repetitivo.</p><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20quiero%20ordenar%20o%20automatizar%20la%20administracion%20de%20mi%20negocio." target="_blank" rel="noopener noreferrer">Hablemos de tu negocio ↗</a></article>
     </div>
     <div class="servicebottom">
       <a class="btn btn-dark" href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">CONOCER CAYELAB ↗</a>
@@ -295,7 +391,8 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
       <p>Soy Caye. Pasé por una etapa en la que tuve que vender mis cosas. En Laferrere, en la casa de mi hermana, dormía en un colchón en el piso. Me quedaba mi ropa, algunas pertenencias y algo que todavía conservo: la decisión de seguir adelante.</p>
       <p>Un día recibí un llamado con la oportunidad de venir a trabajar a Villa La Angostura. La acepté y vine a empezar otra etapa, lejos de Buenos Aires. Cambió el paisaje, pero eso no significa que mi vida haya quedado resuelta de un día para otro.</p>
       <p>Hoy trabajo en gastronomía, doy todo de mí y sigo buscando estabilidad. Vivir en un lugar hermoso también es costoso, y después de apenas unos meses todavía estoy rearmándome. No cuento esto para dar lástima: lo cuento porque el camino también merece ser visto.</p>
-      <p>En paralelo, estoy poniendo mis conocimientos de tecnología y administración en un proyecto propio: <strong>NÚCLEO</strong>, un sistema pensado para ayudar a pequeños negocios a organizar sus proveedores, facturas y pagos. Quiero que todo lo aprendido, incluso en los momentos difíciles, se convierta en algo útil para otros.</p>
+      <p>En paralelo a mi trabajo gastronómico estoy construyendo <strong>CayeLab</strong>, desarrollando webs, sistemas de reservas, procesos administrativos y herramientas digitales. Mi proyecto más ambicioso es <strong>NÚCLEO</strong>: convertir lo que aprendí ordenando proveedores, facturas, remitos, pagos, planillas y controles en una herramienta útil para otros negocios.</p>
+      <p>El proyecto ya pasó de una idea a pantallas y módulos de prueba, pero todavía hay errores por corregir, integraciones por validar y mucho por aprender. Quiero documentar ese camino y, cuando esté listo, compartir una versión de código abierto que otros puedan usar y mejorar.</p>
       <p>Si llegaste hasta acá, gracias por conocer de dónde vengo. Si alguna vez me tendiste una mano, quiero que sepas que no me olvido. Y si hoy querés acompañarme, podés colaborar con el proyecto, compartir esta página o contratar mis servicios. Cada gesto cuenta.</p>
       <span class="signature">Todavía estoy construyendo mi camino. — Caye</span>
     </div>
@@ -305,12 +402,12 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><strong>TODO VUELVE.</strong><p>Crowdfunding independiente para el desarrollo de NÚCLEO.</p><p>© 2026 · Villa La Angostura · Cayetano Raúl Benítez</p></div>
+      <div><strong>TODO VUELVE.</strong><p>Proyecto independiente para desarrollar NÚCLEO y compartir el camino desde CayeLab.</p><p>© 2026 · Villa La Angostura · Cayetano Raúl Benítez</p></div>
       <nav class="footnav" aria-label="Enlaces del pie">
-        <a href="#nucleo">NÚCLEO</a><a href="#aportar">Colaborar</a><a href="#servicios">Servicios</a><a href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">CayeLab</a><a href="https://www.instagram.com/soycaye.ok/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20consultarte%20por%20una%20participacion%20anterior." target="_blank" rel="noopener noreferrer">Consultas anteriores</a>
+        <a href="#nucleo">NÚCLEO</a><a href="#avances">Avances</a><a href="#sumarte">Participar</a><a href="#aportar">Colaborar</a><a href="#servicios">Servicios</a><a href="https://caye2404.github.io/cayelab-web/" target="_blank" rel="noopener noreferrer">CayeLab</a><a href="https://www.instagram.com/soycaye.ok/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://wa.me/5491126830194?text=Hola%20Caye%2C%20necesito%20consultarte%20por%20una%20participacion%20anterior." target="_blank" rel="noopener noreferrer">Consultas anteriores</a>
       </nav>
     </div>
-    <p class="footer-small">Los aportes son voluntarios y se destinan a impulsar un proyecto privado en desarrollo. No representan una inversión ni otorgan participación societaria.</p>
+    <p class="footer-small">Los aportes son voluntarios y ayudan a impulsar un proyecto en desarrollo. No constituyen una inversión, no otorgan participación societaria ni acceso automático al software. NÚCLEO no se ha publicado todavía como proyecto de código abierto.</p>
   </div>
 </footer>
 <script>
