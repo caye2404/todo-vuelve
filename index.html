@@ -189,6 +189,15 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 @media(max-width:920px){.community-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-action{align-items:flex-start;flex-direction:column}}
 @media(max-width:720px){.progress-grid,.journey-grid,.community-grid{grid-template-columns:1fr}.progress-card,.journey-card{padding:24px}.community-grid{gap:12px}.community-grid>div{padding:21px}.journey-action{padding:23px}.progress-card h3,.journey-card h3{font-size:21px}}
 
+
+/* Donaciones destacadas · PayPal al mismo nivel que transferencia Galicia */
+.donatecard form button.paypal-action{display:flex;align-items:center;justify-content:center;gap:13px;width:100%;min-height:69px;padding:18px 20px;border:2px solid #77cfff!important;border-radius:13px;background:linear-gradient(115deg,#087bd3 0%,#004f9e 100%)!important;color:#fff!important;font:800 16px/1.25 Manrope,sans-serif!important;letter-spacing:.02em;box-shadow:0 12px 27px rgba(0,104,198,.32);text-shadow:none;transition:transform .2s,box-shadow .2s,filter .2s}
+.donatecard form button.paypal-action:hover,.donatecard form button.paypal-action:focus-visible{filter:brightness(1.14);box-shadow:0 16px 36px rgba(0,104,198,.40);transform:translateY(-2px)}
+.paypal-action-mark{display:grid;place-items:center;flex-shrink:0;width:32px;height:32px;border-radius:8px;background:#fff;color:#0069be;font:900 24px/1 Manrope,sans-serif;font-style:italic}
+.paypal-action-arrow{margin-left:auto;font-size:22px;color:#fff}
+.donatecard #copyAlias{min-height:69px;border:2px solid #baf28c;border-radius:13px;font-size:16px;box-shadow:0 12px 26px rgba(133,215,90,.16)}
+@media(max-width:420px){.donatecard form button.paypal-action{padding:16px 12px;font-size:14px!important;gap:10px}.paypal-action-mark{width:29px;height:29px;font-size:21px}.paypal-action-arrow{font-size:18px}}
+
 </style>
 </head>
 <body>
@@ -354,7 +363,7 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
         <p>Una alternativa para quienes quieren ayudar desde fuera de Argentina. El aporte se realiza en el sitio de PayPal.</p>
         <form action="https://www.paypal.com/donate" method="post" target="_blank">
           <input type="hidden" name="hosted_button_id" value="LC22GZCYF8AH4">
-          <button class="btn" type="submit">APOYAR POR PAYPAL ↗</button>
+          <button class="btn paypal-action" type="submit" aria-label="Donar al desarrollo de NÚCLEO mediante PayPal"><span class="paypal-action-mark" aria-hidden="true">P</span><span>DONAR CON PAYPAL</span><span class="paypal-action-arrow" aria-hidden="true">↗</span></button>
         </form>
         <p class="fine">También podés usar <a href="https://paypal.me/caye2404" target="_blank" rel="noopener noreferrer">PayPal.Me</a>.</p>
       </article>
