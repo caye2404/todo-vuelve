@@ -198,6 +198,15 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 .donatecard #copyAlias{min-height:69px;border:2px solid #baf28c;border-radius:13px;font-size:16px;box-shadow:0 12px 26px rgba(133,215,90,.16)}
 @media(max-width:420px){.donatecard form button.paypal-action{padding:16px 12px;font-size:14px!important;gap:10px}.paypal-action-mark{width:29px;height:29px;font-size:21px}.paypal-action-arrow{font-size:18px}}
 
+
+/* Logo PayPal de alto contraste y datos completos del titular */
+.paypal-wordmark{display:inline-block;font:italic 900 clamp(28px,4vw,38px)/1.15 Arial,Helvetica,sans-serif;letter-spacing:-1.7px;color:#e8f5ff;text-shadow:0 2px 15px #0006}
+.paypal-wordmark span{color:#71c9ff}
+.account-details{display:grid;gap:3px;background:#101924;border:1px solid #8297a5;border-radius:13px;padding:17px 19px;margin-top:19px}
+.account-details span{color:#bcd0dd;font:800 12px/1.4 Manrope,sans-serif;letter-spacing:.05em;margin-top:8px}
+.account-details span:first-child{margin-top:0}
+.account-details strong{color:#f2f9ff;font:800 clamp(17px,2vw,20px)/1.4 Manrope,sans-serif;overflow-wrap:anywhere}
+
 </style>
 </head>
 <body>
@@ -352,11 +361,11 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
         <div class="aliasbox"><small>Alias · Banco Galicia</small><strong>caye2000</strong></div>
         <button id="copyAlias" type="button" class="btn btn-dark">COPIAR ALIAS ↗</button>
         <div id="copyFeedback" class="feedback" role="status" aria-live="polite"></div>
-        <p class="fine">Titular: Cayetano Raúl Benítez. Verificá el titular antes de transferir.</p>
+        <div class="account-details" aria-label="Datos del titular de la cuenta"><span>TITULAR DE LA CUENTA</span><strong>Cayetano Raúl Benítez</strong><span>CUIT</span><strong>20-33083610-6</strong></div><p class="fine">Verificá estos datos antes de transferir.</p>
       </article>
       <article class="donatecard">
         <div class="cardtop">
-          <div><img class="brandlogo" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><strong class="brandfallback" hidden>PayPal</strong></div>
+          <div><strong class="paypal-wordmark" aria-label="PayPal">Pay<span>Pal</span></strong></div>
           <span class="chip">Desde el exterior</span>
         </div>
         <h3>Colaborar con PayPal</h3>
