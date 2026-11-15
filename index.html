@@ -190,7 +190,7 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 @media(max-width:720px){.progress-grid,.journey-grid,.community-grid{grid-template-columns:1fr}.progress-card,.journey-card{padding:24px}.community-grid{gap:12px}.community-grid>div{padding:21px}.journey-action{padding:23px}.progress-card h3,.journey-card h3{font-size:21px}}
 
 
-/* Donaciones destacadas · PayPal al mismo nivel que transferencia Galicia */
+/* Donaciones destacadas · PayPal al mismo nivel que transferencia BBVA */
 .donatecard form button.paypal-action{display:flex;align-items:center;justify-content:center;gap:13px;width:100%;min-height:69px;padding:18px 20px;border:2px solid #77cfff!important;border-radius:13px;background:linear-gradient(115deg,#087bd3 0%,#004f9e 100%)!important;color:#fff!important;font:800 16px/1.25 Manrope,sans-serif!important;letter-spacing:.02em;box-shadow:0 12px 27px rgba(0,104,198,.32);text-shadow:none;transition:transform .2s,box-shadow .2s,filter .2s}
 .donatecard form button.paypal-action:hover,.donatecard form button.paypal-action:focus-visible{filter:brightness(1.14);box-shadow:0 16px 36px rgba(0,104,198,.40);transform:translateY(-2px)}
 .paypal-action-mark{display:grid;place-items:center;flex-shrink:0;width:32px;height:32px;border-radius:8px;background:#fff;color:#0069be;font:900 24px/1 Manrope,sans-serif;font-style:italic}
@@ -376,12 +376,12 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
     <div class="donate-grid">
       <article class="donatecard">
         <div class="cardtop">
-          <div><img class="brandlogo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banco-Galicia_Logo_2024.png" alt="Banco Galicia" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><strong class="brandfallback" hidden>Galicia</strong></div>
+          <div><strong style="font-size:32px;color:#004481">BBVA</strong></div>
           <span class="chip">Desde Argentina</span>
         </div>
         <h3>Transferencia bancaria</h3>
         <p>Podés colaborar por transferencia desde tu banco o billetera virtual. Elegís vos cuánto aportar.</p>
-        <div class="aliasbox"><small>Alias · Banco Galicia</small><strong>caye2000</strong></div>
+        <div class="bbva-account-details" style="padding:16px;margin:12px 0;background:#fff;color:#072146;border:1px solid #b8cbdc;border-radius:10px;line-height:1.7;overflow-wrap:anywhere"><strong>BBVA · Caja de Ahorro en $</strong><br>Titular: Cayetano Raúl Benítez<br>Alias: <strong>CAYE2404B</strong><br>CBU: <strong>0170051040000030943942</strong><br>Cuenta: 51-309439/4<br>SWIFT: BFRPARBAXXX<br>Sucursal: AV. SANTA FE 946</div><div class="aliasbox"><small>Alias · Banco BBVA</small><strong>CAYE2404B</strong></div>
         <button id="copyAlias" type="button" class="btn btn-dark">COPIAR ALIAS ↗</button>
         <div id="copyFeedback" class="feedback" role="status" aria-live="polite"></div>
         <div class="account-details" aria-label="Datos del titular de la cuenta"><span>TITULAR DE LA CUENTA</span><strong>Cayetano Raúl Benítez</strong><span>CUIT</span><strong>20-33083610-6</strong></div><p class="fine">Verificá estos datos antes de transferir.</p>
@@ -457,9 +457,9 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
   var alias=document.getElementById("copyAlias"), feedback=document.getElementById("copyFeedback");
   alias.addEventListener("click",async function(){
     var ok=false;
-    try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText("caye2000");ok=true}}catch(e){}
-    if(!ok){var t=document.createElement("textarea");t.value="caye2000";t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}
-    feedback.textContent=ok?"Alias copiado. Verificá el titular antes de transferir.":"Copiá manualmente: caye2000";
+    try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText("CAYE2404B");ok=true}}catch(e){}
+    if(!ok){var t=document.createElement("textarea");t.value="CAYE2404B";t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}
+    feedback.textContent=ok?"Alias copiado. Verificá el titular antes de transferir.":"Copiá manualmente: CAYE2404B";
     if(ok)alias.textContent="✓ ALIAS COPIADO";
   });
   var photo=document.getElementById("portrait"),retries=0;

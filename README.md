@@ -10,7 +10,7 @@ La etapa pública de TODO VUELVE impulsa el desarrollo de **NÚCLEO**, una herra
 
 ## Sitio público
 
-- `index.html`: presentación de NÚCLEO, crowdfunding, aportes con Banco Galicia y PayPal, avances y oferta de servicios.
+- `index.html`: presentación de NÚCLEO, crowdfunding, aportes con Banco BBVA y PayPal, avances y oferta de servicios.
 - `campana.json`: importe de **recaudación confirmada**, sin meta fija. **`recaudado_confirmado: null` significa "sin cifra verificable publicada", no cero pesos recibidos**. No cargar ingresos no conciliados. La barra es un recurso visual de crecimiento con escala abierta; **no representa un porcentaje ni un objetivo en pesos**.
 - `numeros.html`: redirige a la campaña. La numeración ya no se muestra públicamente.
 
@@ -26,7 +26,7 @@ No alterar ni eliminar pagos, comprobantes, participantes o historial de etapas 
 
 - GitHub Pages publica esta web desde la rama `main`.
 - Supabase conserva la información privada histórica, fuera de la campaña pública actual.
-- Las contribuciones por Galicia y PayPal **no se sincronizan automáticamente**: reconciliarlas fuera del sitio antes de reflejar un monto en `campana.json`.
+- Las contribuciones por BBVA y PayPal **no se sincronizan automáticamente**: reconciliarlas fuera del sitio antes de reflejar un monto en `campana.json`.
 - El panel privado no fue sustituido ni expuesto.
 - Comprobar el resultado de GitHub Actions y la web pública luego de cada cambio.
 - Nunca añadir credenciales, comprobantes o datos personales a este repositorio público.
