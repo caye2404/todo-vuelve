@@ -219,6 +219,40 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
 .todo-demo-feature .btn{flex-shrink:0}
 @media(max-width:780px){.todo-demo-feature{flex-direction:column;align-items:stretch;padding:22px}.todo-demo-feature .btn{width:100%}}
 
+
+/* TODO VUELVE — sección común de aportes verificables */
+.tv-support{color:#f5f8fc;background:radial-gradient(circle at 8% 10%,#224338 0%,#111a22 42%,#090e16 100%);padding:clamp(34px,5vw,72px) 0;border-block:1px solid #314e4a;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;isolation:isolate}
+.tv-support *{box-sizing:border-box}.tv-support a{text-decoration:none}.tv-support-wrap{width:min(1060px,calc(100% - 32px));margin:0 auto}
+.tv-eyebrow{font-size:13px;font-weight:850;letter-spacing:.16em;color:#baf28c;text-transform:uppercase}
+.tv-support h2{color:#fff;font:800 clamp(31px,4.6vw,52px)/1.12 system-ui,-apple-system,sans-serif;letter-spacing:-.04em;margin:14px 0 18px}
+.tv-support p{color:#d7e2eb;font-size:18px;max-width:850px;line-height:1.68}
+.tv-hero-card{padding:clamp(23px,4vw,42px);background:linear-gradient(140deg,#203a35,#131e29);border:2px solid #6c9f83;border-radius:21px;margin:23px 0 24px;box-shadow:0 16px 36px #0004}
+.tv-hero-card strong{color:#fff;font-size:clamp(21px,2.9vw,27px);display:block;margin:0 0 8px}
+.tv-support .tv-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-align:center;min-height:54px;border-radius:12px;background:#baf28c;color:#10211a;padding:12px 19px;font:850 16px/1.3 system-ui,-apple-system,sans-serif;border:2px solid transparent;cursor:pointer;box-shadow:none;transition:filter .15s,transform .15s}
+.tv-support .tv-btn:hover{filter:brightness(1.09);transform:translateY(-1px)}
+.tv-support .tv-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.tv-support .tv-btn.tv-outline{background:#1a2933;color:#fff;border-color:#638c86}
+.tv-support .tv-btn.tv-paypal{background:#0876c9;color:#fff;border-color:#7dcfff;font-size:18px;min-height:61px;width:100%}
+.tv-paypal-brand{font:bold italic 23px Arial,sans-serif;letter-spacing:-1.3px;color:#fff;white-space:nowrap}
+.tv-paypal-brand span{color:#bce9ff}
+.tv-payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:28px 0 14px}
+.tv-payment-card{background:#18232f;border:1px solid #455a68;border-radius:17px;padding:23px;min-width:0}
+.tv-payment-card h3{font-size:21px;color:#fff;margin:10px 0 8px}
+.tv-payment-card p{font-size:15px;color:#d5dfe9;margin:0 0 12px}
+.tv-payment-card .tv-btn{width:100%}
+.tv-mark{display:inline-flex;align-items:center;justify-content:center;border:1px solid #637784;border-radius:10px;min-height:41px;padding:6px 12px;color:white;background:#12202a;font-weight:900;font-size:20px;letter-spacing:-.05em}
+.tv-mark.tv-astro{letter-spacing:-.045em;color:#e7efff}
+.tv-mark.tv-galicia{color:#ffb44d}
+.tv-mark.tv-bbva{color:#a4c7ec}
+.tv-alias{display:block;font:850 clamp(21px,3vw,28px)/1.3 system-ui,sans-serif;letter-spacing:-.035em;color:#d9ffb2;background:#0b141c;border:1px dashed #90ad88;padding:13px 15px;border-radius:10px;margin:12px 0 13px;overflow-wrap:anywhere}
+.tv-disabled{opacity:.75;border-style:dashed}
+.tv-disabled .tv-status{font-size:15px;color:#f4ceaa;font-weight:700}
+.tv-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:25px 0;padding:22px;background:#102027;border:1px solid #557b71;border-radius:13px}
+.tv-meta strong{font-size:23px;color:#fff;display:block}
+.tv-meta small{display:block;color:#b9cdd6;font-size:14px}
+.tv-note{font-size:15px!important;color:#cedde5!important;max-width:950px!important}
+.tv-copy-note{color:#ceff9d!important;font-weight:750;min-height:21px;font-size:15px!important;margin:5px 0 0}
+@media(max-width:720px){.tv-payment-grid{grid-template-columns:1fr}.tv-support h2{font-size:33px}.tv-hero-card{padding:23px}.tv-support .tv-btn{width:100%}.tv-meta{align-items:stretch}.tv-meta .tv-btn{width:100%}}
 </style>
 </head>
 <body>
@@ -236,6 +270,62 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
   </div>
 </header>
 <main id="contenido">
+
+<section class="tv-support" id="colaborar-todo-vuelve" aria-labelledby="tv-support-title">
+ <div class="tv-support-wrap">
+  <span class="tv-eyebrow">PROYECTO NÚCLEO · TODO VUELVE</span>
+  <h2 id="tv-support-title">Estamos construyendo algo grande. Y podés ser parte.</h2>
+  <p>Estoy desarrollando <strong>NÚCLEO</strong>, un sistema de administración para emprendedores y PyMEs: proveedores, documentos, vencimientos, pagos y controles en un mismo lugar. También estoy buscando estabilidad y la posibilidad de regresar a Buenos Aires. Quiero mostrar avances reales, aprender de quienes se sumen y agradecer públicamente el apoyo, respetando siempre su privacidad.</p>
+  <div class="tv-hero-card">
+   <strong>Primero, conocé NÚCLEO y todo lo que estamos construyendo</strong>
+   <p>Un proyecto tecnológico nacido de años de experiencia práctica. Podés conocerlo, compartirlo, ofrecer una oportunidad laboral o apoyarlo voluntariamente.</p>
+   <a class="tv-btn" href="https://caye2404.github.io/todo-vuelve/#nucleo">💻 CONOCER EL PROYECTO NÚCLEO ↗</a>
+   <a class="tv-btn tv-outline" href="https://caye2404.github.io/cayelab-web/nucleo-demo/" style="margin-top:10px">VER DEMOSTRACIÓN ↗</a>
+  </div>
+  <span class="tv-eyebrow">COLABORACIONES VOLUNTARIAS</span>
+  <h2>Elegí cómo acompañarme</h2>
+  <p>Si está dentro de tus posibilidades y querés colaborar, cualquier aporte es bienvenido. No es una compra, inversión ni participación en un sorteo. <strong>No hay premios ni contraprestaciones garantizadas.</strong> También podés ayudar compartiendo o acercándome trabajo.</p>
+  <div class="tv-payment-grid">
+   <article class="tv-payment-card">
+    <div class="tv-mark" aria-label="PayPal">Pay<span style="color:#81cfff">Pal</span></div>
+    <h3>Donar con PayPal</h3>
+    <p>Opción destacada para colaboraciones desde Argentina o el exterior, sujeta a las opciones que admita PayPal.</p>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+     <input type="hidden" name="hosted_button_id" value="LC22GZCYF8AH4">
+     <button class="tv-btn tv-paypal" type="submit"><span class="tv-paypal-brand">Pay<span>Pal</span></span> DONAR VOLUNTARIAMENTE ↗</button>
+    </form>
+    <p style="margin-top:9px">Alternativa: <a href="https://paypal.me/caye2404" target="_blank" rel="noopener noreferrer" style="color:#a9d8ff;text-decoration:underline">paypal.me/caye2404</a></p>
+   </article>
+   <article class="tv-payment-card">
+    <div class="tv-mark tv-astro" aria-label="AstroPay">astroPay</div>
+    <h3>AstroPay</h3>
+    <p>Billetera virtual. Verificá el titular que aparece antes de realizar la transferencia.</p>
+    <span class="tv-alias">caye2404.astro</span>
+    <button type="button" class="tv-btn tv-copy-alias" data-alias="caye2404.astro">⧉ COPIAR ALIAS ASTROPAY</button>
+    <p class="tv-copy-note" role="status" aria-live="polite"></p>
+   </article>
+   <article class="tv-payment-card">
+    <div class="tv-mark tv-galicia" aria-label="Banco Galicia">Galicia</div>
+    <h3>Banco Galicia</h3>
+    <p>Transferencias desde Argentina. Confirmá el destinatario antes de enviar.</p>
+    <span class="tv-alias">caye2000</span>
+    <button type="button" class="tv-btn tv-copy-alias" data-alias="caye2000">⧉ COPIAR ALIAS GALICIA</button>
+    <p class="tv-copy-note" role="status" aria-live="polite"></p>
+   </article>
+   <article class="tv-payment-card tv-disabled">
+    <div class="tv-mark tv-bbva" aria-label="Banco BBVA">BBVA</div>
+    <h3>BBVA</h3>
+    <p class="tv-status">Temporalmente no disponible para recibir aportes.</p>
+    <p>No mostramos el alias ni el CBU anterior para evitar transferencias fallidas. Elegí AstroPay, Galicia o PayPal.</p>
+   </article>
+  </div>
+  <div class="tv-meta">
+   <div><span class="tv-eyebrow">TRANSPARENCIA</span><strong>Recaudación confirmada: <span class="tv-verified-amount" aria-live="polite">pendiente de verificación</span></strong><small>El total se publicará únicamente después de conciliar los aportes. Sin cifras inventadas.</small></div>
+   <a class="tv-btn tv-outline" href="https://caye2404.github.io/todo-vuelve/#avances">VER PROGRESO Y AVANCES ↗</a>
+  </div>
+  <p class="tv-note">Los aportes son personales y completamente voluntarios. Si colaborás, no adquirís derechos sobre NÚCLEO ni sobre premios futuros. Mi compromiso es compartir avances, el destino de los fondos y las formas en que pueda agradecer a quienes me acompañan, sin prometer beneficios específicos. Gracias por ayudar a construir el próximo capítulo.</p>
+ </div>
+</section>
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -476,6 +566,26 @@ footer{background:#080d13;border-top:1px solid #32404d;color:#dce5ee}
     document.getElementById("fundFill").style.width=Math.max(0,Math.min(100,visual))+"%";
     document.getElementById("fundTrack").setAttribute("aria-label","Recaudación confirmada: "+money(amount)+". Indicador visual, sin meta fija.");
   }).catch(function(){});
+})();
+</script>
+
+<script>
+(function(){
+  var section=document.querySelector(".tv-support");if(!section)return;
+  section.querySelectorAll(".tv-copy-alias").forEach(function(btn){
+    btn.addEventListener("click",async function(){
+      var value=btn.getAttribute("data-alias"),ok=false;
+      try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(value);ok=true}}catch(e){}
+      if(!ok){var t=document.createElement("textarea");t.value=value;t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}
+      var note=btn.nextElementSibling;if(note)note.textContent=ok?"✓ Alias copiado. Verificá el destinatario.":"Copialo manualmente: "+value;
+    });
+  });
+  fetch("https://caye2404.github.io/todo-vuelve/campana.json",{cache:"no-store"})
+   .then(function(r){if(!r.ok)throw new Error("No disponible");return r.json()})
+   .then(function(d){var n=d.recaudado_confirmado;if(typeof n!=="number"||!Number.isFinite(n)||n<0)return;
+     var el=section.querySelector(".tv-verified-amount");
+     if(el)el.textContent=new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(n);
+   }).catch(function(){});
 })();
 </script>
 </body>
