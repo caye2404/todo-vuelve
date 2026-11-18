@@ -1,0 +1,14 @@
+**/.git/**
+**/node_modules/**
+**/.DS_Store
+README.md
+CLOUDFLARE_PUBLICACION.md
+REVISION_PRIVADA.md
+campana.json
+admin.html
+numeros.html
+cv-cayetano-benitez.pdf
+cv-pagina-1.webp
+cv-pagina-2.webp
+wrangler.jsonc
+.assetsignore
