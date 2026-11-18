@@ -16,3 +16,31 @@ const syncScroll=()=>{const max=document.documentElement.scrollHeight-window.inn
 let scheduled=false;window.addEventListener('scroll',()=>{if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{syncScroll();scheduled=false})},{passive:true});window.addEventListener('resize',syncScroll);syncScroll();
 // Pausar otros videos al reproducir uno; no se transmite ningún dato a servidores.
 $$('video').forEach(video=>video.addEventListener('play',()=>$$('video').forEach(other=>{if(other!==video&&!other.paused)other.pause()})));
+
+const campaignNodes={goal:$('#funding-goal'),raised:$('#funding-raised'),percentage:$('#funding-percentage'),fill:$('#funding-fill'),explanation:$('#funding-explanation'),update:$('#funding-update')};
+const ars=v=>new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0}).format(v);
+async function loadCampaign(){
+  try {
+    const res=await fetch('progreso-nosmueve.json',{cache:'no-store'});
+    if(!res.ok)throw Error('No se pudo consultar el progreso');
+    const d=await res.json();
+    const goal=Number(d.meta_ars);
+    if(Number.isFinite(goal)&&goal>0)campaignNodes.goal.innerHTML=ars(goal)+' <small>ARS</small>';
+    const value=d.recaudado_confirmado_ars;
+    if(typeof value==='number'&&Number.isFinite(value)&&value>=0){
+      const pct=Number.isFinite(goal)&&goal>0?Math.min(100,Math.max(0,value/goal*100)):null;
+      campaignNodes.raised.textContent=ars(value);
+      campaignNodes.percentage.textContent=pct===null?'Sin meta verificada':(pct<1&&value>0?'< 1%':Math.round(pct)+'%');
+      campaignNodes.fill.style.width=pct===null?'0%':pct+'%';
+      campaignNodes.explanation.textContent='Esta cifra refleja únicamente aportes conciliados. Si se reciben nuevos aportes, el total se actualiza después de verificarlos.';
+      if(d.ultima_actualizacion)campaignNodes.update.textContent='Última actualización: '+d.ultima_actualizacion;
+    }else{
+      campaignNodes.raised.textContent='Pendiente de conciliación';
+      campaignNodes.percentage.textContent='Por verificar';
+      campaignNodes.fill.style.width='0%';
+    }
+  }catch(err){
+    campaignNodes.explanation.textContent='No se pudo cargar el registro de aportes. Los importes no se estiman.';
+  }
+}
+loadCampaign();
