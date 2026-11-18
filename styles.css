@@ -92,3 +92,32 @@
 .share-button{border-radius:3px;background:#252f29}
 @media(max-width:950px){.why-layout{grid-template-columns:1fr;gap:37px}.why-intro{position:static}.why-intro h2{max-width:780px}.support-layout{grid-template-columns:1fr;gap:38px}.support-card{max-width:660px}}
 @media(max-width:740px){.why-section{padding:75px 0 85px}.why-intro h2{font-size:clamp(46px,10vw,65px)}.why-body>p{font-size:16px}.support{padding:75px 0 86px}.bank-row{padding:13px 14px}.bank-value code{font-size:clamp(12px,3.5vw,16px)}.support-story h2{font-size:clamp(39px,10vw,59px)}}
+
+/* Recaudación personal: explicación y seguimiento verificable */
+.hero-links{display:flex;align-items:center;flex-wrap:wrap;gap:18px 24px}
+.hero-help-link{font:700 13px/1.5 var(--sans);color:#e9dbcf;text-decoration:underline;text-underline-offset:5px}
+.funding-overview{padding:clamp(80px,9vw,126px) 0;background:#f6f2e9;border-bottom:1px solid #e1d9cb}
+.funding-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.95fr);gap:clamp(30px,7vw,96px);align-items:center}
+.funding-copy h2{font:normal clamp(43px,5vw,70px)/1.08 var(--serif);letter-spacing:-.058em;margin:18px 0 28px;max-width:650px}
+.funding-copy h2 em{font-style:italic;color:#ad735c}
+.funding-copy p:not(.kicker){font-size:17px;line-height:1.8;color:#4b534e;margin:0 0 20px}
+.funding-copy strong{color:#202624}
+.funding-story-link{display:inline-block;margin-top:10px;text-underline-offset:6px;font-size:14px;font-weight:800}
+.funding-meter{background:#161c1c;color:#f7f4ed;padding:clamp(27px,4vw,44px);border:1px solid #9c754f;box-shadow:0 22px 58px #2e26211a}
+.funding-topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;letter-spacing:.12em;color:#dabb8a;font-weight:800}
+.funding-target{font:700 clamp(49px,5.9vw,78px)/1.07 var(--serif);letter-spacing:-.055em;color:#e3b56a;margin:15px 0 12px}
+.funding-target small{font:700 15px var(--sans);letter-spacing:0}
+.funding-target-note,.funding-explanation{font:normal 13px/1.7 var(--sans);color:#b9c1bb;margin:0 0 19px}
+.funding-divider{height:1px;background:#46504c;margin:24px 0}
+.funding-label{font:800 11px var(--sans);letter-spacing:.13em;color:#c5ccc6;margin:0 0 7px}
+.funding-total{font:600 clamp(27px,3vw,41px)/1.2 var(--serif);margin:0 0 27px;color:#fff}
+.funding-progress-label{display:flex;justify-content:space-between;gap:10px;align-items:center;color:#d6dbd5;font-size:13px;margin:0 0 9px}
+.funding-progress-label strong{color:#e3b56a;font-size:13px}
+.funding-track{height:10px;background:#3b4540;border-radius:30px;overflow:hidden;margin-bottom:16px}
+.funding-track #funding-fill{height:100%;width:0%;background:#deb36f;border-radius:30px;transition:width .5s ease}
+.funding-update{font:normal 12px/1.5 var(--sans);color:#b4bbaf}
+.funding-donate{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#e3b56a;color:#1e2220;text-decoration:none;font:800 14px var(--sans);padding:17px 21px;margin-top:20px}
+.funding-donate:hover{background:#f0c27d}
+@media(max-width:900px){.funding-layout{grid-template-columns:1fr}.funding-meter{max-width:680px}.funding-copy h2{max-width:800px}}
+@media(max-width:600px){.funding-overview{padding:60px 0 75px}.funding-copy h2{font-size:clamp(40px,10vw,58px)}.funding-copy p:not(.kicker){font-size:16px}.funding-topline{font-size:9px}.funding-target{font-size:clamp(48px,13vw,67px)}.funding-total{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.funding-track #funding-fill{transition:none}}
