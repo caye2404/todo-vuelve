@@ -1,20 +1,24 @@
-# NOS MUEVE · Vos contás
+# NOS MUEVE — Versión 2 / relato cronológico
 
-Una web independiente con una historia real, juegos gratuitos y posibilidad de colaborar voluntariamente. **No es NÚCLEO ni CayeLab**. No se venden números, no hay sorteos ni apuestas, y jugar nunca depende de aportar dinero.
+Sitio estático (HTML, CSS, JavaScript) preparado para la cuenta de GitHub `caye2404/todo-vuelve` y el Worker `nosmueve.benitez-lencina.workers.dev`. No es NÚCLEO ni CayeLab.
 
-## Qué contiene
-- Línea de tiempo con seis capítulos interactivos basada en el relato en primera persona.
-- Fotografías aportadas por el protagonista, optimizadas a WebP y sin metadatos EXIF de los originales.
-- Dos videos aportados, convertidos a H.264 para móviles. El tercer video era una variante del mismo material y se omitió para evitar duplicarlo.
-- Tres juegos que funcionan localmente sin registro, perfiles ni seguimiento: «¿Qué te mueve?», Memoria y Tres decisiones.
-- Dos vías de colaboración voluntaria: BBVA (alias `caye2404b`) y PayPal (`paypal.me/caye2404`), tomadas de la campaña previa. Confirmar el titular antes de transferir.
-- Compartir por Web Share API con alternativa de copiar enlace.
+## Recorrido
+1. Ramos Mejía · antes
+2. El quiebre · el remate
+3. Laferrere · pertenencias en el pasto
+4. Villa del Parque · vida precaria
+5. La valija · decisión de viajar
+6. Villa La Angostura · nueva etapa
+7. Hoy · proyectos y reconstrucción
 
-## Privacidad y honestidad
-La web no registra datos personales, no envía resultados de juegos a ningún servidor y no muestra totales de aportes no verificados. Se omiten fechas exactas que el material no confirma. Revisar con el protagonista las fotos, los subtítulos y las experiencias que desea mantener públicas antes de difundir el enlace de forma masiva.
+## Interacción
+Navegación y progreso al desplazarse, capítulos desplegables, bloque final «¿Qué te mueve hoy?» y opción de compartir/colaborar voluntariamente. No hay memotest ni otros minijuegos. Las respuestas no se guardan ni envían a servidores.
+
+## Archivos reales y precisión
+Las 18 imágenes WebP fueron verificadas en la copia de trabajo: no poseen campos EXIF. No usar rutas `/fotos/...` que no existen en este repositorio; se mantienen las rutas reales `assets/img/` para evitar imágenes rotas. Los posters están en `assets/posters/`. Las imágenes de archivo junto a Ramos Mejía o Villa La Angostura son recuerdos de otras etapas, sin atribuirles fecha ni lugar concreto de captura no confirmados. En el caso de querer usar fotografías concretas de Ramos Mejía, sustituirlas solamente después de identificar su procedencia.
+
+## Video y protección de metadatos
+Los videos de la versión anterior contenían metadatos de fecha/dispositivo. Para cumplir la consigna de privacidad se generaron copias **sin metadatos incrustados** mediante remux FFmpeg. Verificar las copias que se suban a GitHub antes de publicar. Ojo: si una versión anterior estuvo disponible públicamente en GitHub, sus archivos pueden permanecer en el historial del repositorio o en cachés, aunque las copias actuales estén limpias.
 
 ## Publicación
-Sitio estático: subir **todo** el contenido de esta carpeta al repositorio/hosting (no solamente `index.html`).
-Cloudflare Pages: tipo de proyecto *static*, sin comando de compilación; directorio de salida `/` (o el directorio que contenga `index.html`). GitHub Pages también funciona desde raíz.
-
-No modificar el sistema productivo de NÚCLEO, la web de CayeLab, ni los respaldos de campañas previas. Si se sustituye una página anterior, conservar el historial en Git.
+Conservar ambos enlaces de medios de pago opcionales, fuera de todo mecanismo de participación. Las estadísticas de recaudación no se inventan. El despliegue a Cloudflare debe revisarse: la rama `main` todavía dispara comprobaciones del Worker `apoyarnucleo`; no modificar ese proyecto sin comprobar la configuración de Cloudflare. Una rama de revisión permite evaluar V2 sin reemplazar automáticamente el sitio público.
