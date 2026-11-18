@@ -1,32 +1,20 @@
-# TODO VUELVE — campaña de crowdfunding para NÚCLEO
+# NOS MUEVE · Vos contás
 
-La etapa pública de TODO VUELVE impulsa el desarrollo de **NÚCLEO**, una herramienta web para ayudar a pequeños comercios y emprendimientos a organizar proveedores, facturas, vencimientos, pagos y conciliaciones.
+Una web independiente con una historia real, juegos gratuitos y posibilidad de colaborar voluntariamente. **No es NÚCLEO ni CayeLab**. No se venden números, no hay sorteos ni apuestas, y jugar nunca depende de aportar dinero.
 
-## Enlaces
+## Qué contiene
+- Línea de tiempo con seis capítulos interactivos basada en el relato en primera persona.
+- Fotografías aportadas por el protagonista, optimizadas a WebP y sin metadatos EXIF de los originales.
+- Dos videos aportados, convertidos a H.264 para móviles. El tercer video era una variante del mismo material y se omitió para evitar duplicarlo.
+- Tres juegos que funcionan localmente sin registro, perfiles ni seguimiento: «¿Qué te mueve?», Memoria y Tres decisiones.
+- Dos vías de colaboración voluntaria: BBVA (alias `caye2404b`) y PayPal (`paypal.me/caye2404`), tomadas de la campaña previa. Confirmar el titular antes de transferir.
+- Compartir por Web Share API con alternativa de copiar enlace.
 
-- Campaña pública: https://caye2404.github.io/todo-vuelve/
-- CayeLab — servicios de páginas web, soporte IT y automatizaciones: https://caye2404.github.io/cayelab-web/
-- Antiguo panel del sorteo: retirado; los accesos administrativos ahora se realizan en https://nucleo.benitez-lencina.workers.dev/
+## Privacidad y honestidad
+La web no registra datos personales, no envía resultados de juegos a ningún servidor y no muestra totales de aportes no verificados. Se omiten fechas exactas que el material no confirma. Revisar con el protagonista las fotos, los subtítulos y las experiencias que desea mantener públicas antes de difundir el enlace de forma masiva.
 
-## Sitio público
+## Publicación
+Sitio estático: subir **todo** el contenido de esta carpeta al repositorio/hosting (no solamente `index.html`).
+Cloudflare Pages: tipo de proyecto *static*, sin comando de compilación; directorio de salida `/` (o el directorio que contenga `index.html`). GitHub Pages también funciona desde raíz.
 
-- `index.html`: presentación de NÚCLEO, crowdfunding, aportes con Banco BBVA y PayPal, avances y oferta de servicios.
-- `campana.json`: importe de **recaudación confirmada**, sin meta fija. **`recaudado_confirmado: null` significa "sin cifra verificable publicada", no cero pesos recibidos**. No cargar ingresos no conciliados. La barra es un recurso visual de crecimiento con escala abierta; **no representa un porcentaje ni un objetivo en pesos**.
-- `numeros.html`: redirige a la campaña. La numeración ya no se muestra públicamente.
-
-La campaña **no ofrece números, premios, rifas ni sorteos**. Las contribuciones son voluntarias al desarrollo de un proyecto privado y no otorgan derechos societarios. Los enlaces de pago no se vinculan a participaciones.
-
-## Historial privado anterior
-
-Los registros de las participaciones de la etapa anterior **no se borraron**. Se conservan en el esquema privado de Supabase y permanecen accesibles únicamente en el panel `admin.html` / `admin.js`, protegido con Supabase Auth.
-
-No alterar ni eliminar pagos, comprobantes, participantes o historial de etapas anteriores para crear esta nueva campaña. Las obligaciones con participantes anteriores se revisan individualmente y se resuelven por separado.
-
-## Tecnología y publicación
-
-- GitHub Pages publica esta web desde la rama `main`.
-- Supabase conserva la información privada histórica, fuera de la campaña pública actual.
-- Las contribuciones por BBVA y PayPal **no se sincronizan automáticamente**: reconciliarlas fuera del sitio antes de reflejar un monto en `campana.json`.
-- El panel privado no fue sustituido ni expuesto.
-- Comprobar el resultado de GitHub Actions y la web pública luego de cada cambio.
-- Nunca añadir credenciales, comprobantes o datos personales a este repositorio público.
+No modificar el sistema productivo de NÚCLEO, la web de CayeLab, ni los respaldos de campañas previas. Si se sustituye una página anterior, conservar el historial en Git.
