@@ -48,3 +48,47 @@
 .today-mountains{max-width:740px;margin-left:auto;margin-right:auto}
 .today-mountains img{object-position:center 54%}
 @media(max-width:650px){.nature-videos video{max-height:440px}}
+
+/* NOS MUEVE — Personal narrative and donation section, Nov 2026 */
+.why-section{background:#1c2423;color:#f4efe6;padding:clamp(85px,10vw,150px) 0}
+.why-layout{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:clamp(30px,8vw,116px);align-items:start}
+.why-intro{position:sticky;top:105px}
+.why-intro .kicker{color:#c7ae9f}
+.why-intro h2{font:normal clamp(50px,5.8vw,83px)/1.04 var(--serif);letter-spacing:-.06em;max-width:620px;margin:15px 0 33px}
+.why-intro h2 em{font-style:italic;color:#d4a28c}
+.why-question{color:#d7ded9;max-width:430px;font-size:17px;line-height:1.7}
+.why-direct{font:italic clamp(23px,3.1vw,36px)/1.3 var(--serif);color:#eac0ac;max-width:490px}
+.why-body>p{font-size:17px;line-height:1.88;color:#e1e3df;margin:0 0 25px}
+.why-body .why-closure{border-left:2px solid #d3a28a;padding:4px 0 4px 22px;color:#fff;font-size:18px}
+.why-body strong{font-weight:700;color:#fff}
+.needs{border-top:1px solid #69726d;margin:33px 0 35px}
+.need{display:grid;grid-template-columns:37px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid #69726d}
+.need-num{font-size:12px;letter-spacing:.08em;color:#dbb6a1;font-weight:800;padding-top:6px}
+.need h3{font:normal clamp(23px,2.4vw,31px)/1.2 var(--serif);margin:0 0 8px}
+.need p{font-size:15px;color:#d1d6d1;line-height:1.75;margin:0}
+.support{padding:clamp(72px,9vw,128px) 0;background:#f1ede6}
+.support-layout{grid-template-columns:minmax(0,.92fr) minmax(0,1fr);gap:clamp(28px,6vw,94px)}
+.support-story h2{font-size:clamp(40px,5vw,68px);margin-bottom:29px}
+.support-story p:not(.kicker){font-size:17px;color:#4b544e;line-height:1.8;margin-bottom:18px}
+.support-card{padding:clamp(22px,3vw,39px);border:1px solid #d6cbbd;background:#fffcf8;border-radius:4px;box-shadow:0 22px 42px #2d29200d}
+.support-card h3{font:normal clamp(28px,3vw,38px)/1.13 var(--serif);margin:0 0 22px}
+.support-card .micro-label{color:#805d50;margin:0 0 13px}
+.support-card .payment-hint{font-size:13px;color:#68716c;margin:0 0 14px}
+.bank-details{border:1px solid #d9d0c4;background:#f9f6f0;margin:0}
+.bank-row{padding:15px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:1px solid #ded6ca}
+.bank-row:last-child{border:0}
+.bank-row>span{font-size:12px;letter-spacing:.03em;color:#657066;flex:0 0 auto}
+.bank-row>strong{font-size:14px;font-weight:700;text-align:right}
+.bank-row.bank-key{display:block}
+.bank-value{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:8px}
+.bank-value strong{font-size:clamp(24px,4.4vw,32px);line-height:1.2;letter-spacing:-.035em;word-break:break-all}
+.bank-value code{font:700 clamp(13px,1.7vw,17px)/1.5 'Courier New',monospace;letter-spacing:.018em;overflow-wrap:anywhere;color:#1e2825}
+.bank-value button{border:1px solid #98a49a!important;background:transparent!important;color:#1b2923!important;border-radius:3px;min-height:36px;padding:6px 12px!important;font:700 12px var(--sans);flex-shrink:0}
+.bank-value button:hover{background:#e4ebe3!important}
+.payment-divider{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#68726b;text-align:center;margin:27px 0 13px}
+.paypal-link{display:flex!important;align-items:center;justify-content:space-between;border:1px solid #1a4567!important;border-radius:4px!important;background:#143d5b!important;color:#fff!important;padding:17px 21px!important;font:700 16px var(--sans)!important;box-shadow:none!important;text-decoration:none}
+.paypal-link:hover{background:#205174!important}
+.support-card .support-note{font-size:12px;line-height:1.65;color:#657068;margin:21px 0 0}
+.share-button{border-radius:3px;background:#252f29}
+@media(max-width:950px){.why-layout{grid-template-columns:1fr;gap:37px}.why-intro{position:static}.why-intro h2{max-width:780px}.support-layout{grid-template-columns:1fr;gap:38px}.support-card{max-width:660px}}
+@media(max-width:740px){.why-section{padding:75px 0 85px}.why-intro h2{font-size:clamp(46px,10vw,65px)}.why-body>p{font-size:16px}.support{padding:75px 0 86px}.bank-row{padding:13px 14px}.bank-value code{font-size:clamp(12px,3.5vw,16px)}.support-story h2{font-size:clamp(39px,10vw,59px)}}
