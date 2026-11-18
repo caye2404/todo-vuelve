@@ -28,3 +28,13 @@
 @media(max-width:860px){.hero-layout{grid-template-columns:1fr;gap:40px}.hero h1{font-size:clamp(57px,12vw,89px)}.hero-storyboard{max-width:560px}.storyboard-images img{height:210px}.storyboard-images figure:nth-child(2) img{height:180px}}
 @media(max-width:430px){.hero-storyboard{padding:17px}.storyboard-quote{font-size:28px}.storyboard-images img{height:170px}.storyboard-images figure:nth-child(2) img{height:145px}.hero h1{font-size:clamp(53px,13vw,76px)}}
 @media(prefers-reduced-motion:reduce){.paypal-link{transition:none}}
+
+/* Material audiovisual ubicado en la etapa real de la cronología */
+.archive-video{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,300px);gap:22px;align-items:center;margin:34px 0 28px;padding:22px;background:#e9e4da;border-left:3px solid #b46f50}
+.archive-video .archive-copy h3{font:normal clamp(23px,2.7vw,35px)/1.18 Georgia,serif;margin:4px 0 12px}
+.archive-video .archive-copy p{font-size:14px;line-height:1.6;margin:0 0 9px}
+.archive-video figure{margin:0}
+.archive-video video{display:block;width:100%;max-height:390px;background:#161717;object-fit:contain}
+.archive-video figcaption{padding:10px 0;font-size:12px;color:#646862}
+.today-mountains img{object-position:center 37%}
+@media(max-width:680px){.archive-video{grid-template-columns:1fr;gap:14px;padding:16px}.archive-video video{max-height:460px}}
