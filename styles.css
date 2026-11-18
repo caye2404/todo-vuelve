@@ -38,3 +38,13 @@
 .archive-video figcaption{padding:10px 0;font-size:12px;color:#646862}
 .today-mountains img{object-position:center 37%}
 @media(max-width:680px){.archive-video{grid-template-columns:1fr;gap:14px;padding:16px}.archive-video video{max-height:460px}}
+
+/* Videos de paisaje actuales: formato vertical, reproducción voluntaria */
+.nature-videos{margin-top:40px;padding-top:27px;border-top:1px solid rgba(128,128,128,.2)}
+.nature-videos .video-grid{align-items:start}
+.nature-videos video{display:block;width:100%;max-height:540px;aspect-ratio:9/14;object-fit:contain;background:#141c1c}
+.nature-videos .video-grid figure{min-width:0}
+.nature-footnote{margin:15px 0 0;color:#77776e;font-size:12px;line-height:1.5}
+.today-mountains{max-width:740px;margin-left:auto;margin-right:auto}
+.today-mountains img{object-position:center 54%}
+@media(max-width:650px){.nature-videos video{max-height:440px}}
