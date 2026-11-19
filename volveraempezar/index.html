@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061622"><meta name="description" content="VOLVER A EMPEZAR: conocé mi historia, el proyecto NÚCLEO para PyMEs y cómo colaborar de manera voluntaria o sumarte como sponsor.">
+<meta property="og:title" content="VOLVER A EMPEZAR | Caye Benítez">
+<meta property="og:description" content="Estoy construyendo NÚCLEO y buscando apoyo para volver a Buenos Aires y seguir adelante. Colaboraciones voluntarias.">
+<title>VOLVER A EMPEZAR — Caye Benítez | NÚCLEO</title>
+<style>
+:root{color-scheme:dark;--bg:#07131e;--panel:#102434;--ink:#f4fcff;--muted:#bed0de;--aqua:#39e8e8;--line:#355663}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 4%,#103b4a 0%,transparent 40%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1100px,calc(100% - 34px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#07131eee;border-bottom:1px solid #2b4758;backdrop-filter:blur(14px)}
+nav{display:flex;gap:18px;justify-content:space-between;align-items:center;min-height:66px}nav strong{font-weight:900;letter-spacing:.06em;font-size:16px}nav a{font-size:14px;text-decoration:none;color:#d4eef2;font-weight:700}
+.navlinks{display:flex;align-items:center;gap:17px;flex-wrap:wrap}.eyebrow{color:var(--aqua);font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.hero{padding:64px 0 44px}.hero-grid{display:grid;grid-template-columns:1fr .85fr;align-items:center;gap:38px}
+h1{font-size:clamp(43px,6vw,83px);line-height:1.05;letter-spacing:-.06em;margin:12px 0 20px}h1 em{font-style:normal;color:var(--aqua)}h2{font-size:clamp(29px,4vw,47px);letter-spacing:-.045em;line-height:1.13;margin:8px 0 20px}h3{font-size:22px;margin:8px 0}p{color:var(--muted);font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:8px;padding:15px 20px;border-radius:12px;background:var(--aqua);border:2px solid transparent;color:#04151d;font-size:15px;font-weight:900;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn.secondary{background:transparent;border-color:#69818f;color:#effaff}.btn.paypal{background:#1379cc;color:white;width:100%}.btn:focus-visible{outline:3px solid white;outline-offset:3px}.btn:hover{filter:brightness(1.1)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:25px 0}.notice{background:#102935;border-left:4px solid var(--aqua);padding:14px 20px;border-radius:8px;font-size:15px;color:#deedf3}
+section{padding:48px 0}.panel{background:#102232;border:1px solid var(--line);padding:24px;border-radius:19px}
+.poster{background:radial-gradient(circle at 100% 100%,#064b69,#071c2b 55%,#050d19);border:2px solid var(--aqua);box-shadow:0 0 50px #06e7e51c,0 20px 60px #0007;border-radius:20px;text-align:center;padding:30px 22px;position:relative;overflow:hidden}
+.poster:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 26px,#22cce509 27px 28px);pointer-events:none}
+.poster>*{position:relative}.poster .cap{font-weight:900;letter-spacing:.16em;color:#c4faff;font-size:13px}.poster .big{font-size:clamp(29px,4.2vw,50px);font-weight:950;letter-spacing:-.055em;line-height:1.06;margin:24px 0 10px}
+.poster .big b{color:var(--aqua)}.poster .sponsor{font-size:23px;font-weight:900;background:var(--aqua);color:#001c23;margin:20px -12px;padding:12px 8px;border-radius:10px}
+.poster p{font-size:15px;color:#ecfaff}.poster .bottom{font-size:18px;font-weight:900;letter-spacing:-.03em;margin-top:23px;color:#78fcff}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.mini{font-size:14px;color:#bdcfd6}.payments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:26px 0}
+.paycard{background:#112738;border:1px solid #426078;border-radius:16px;padding:21px;min-width:0}.paycard strong{font-size:22px}.paycard small{display:block;color:#b4cad5;margin:7px 0 12px}
+.alias{font-size:clamp(18px,2.6vw,25px);font-weight:900;word-break:break-word;color:#bafee1;padding:12px;background:#091923;border:1px dashed #7896a4;border-radius:8px;margin:13px 0}.paycard .btn{width:100%;font-size:14px}.copy-status{min-height:21px;color:#aaffb3;font-size:13px}
+.owner{border:1px solid #547c88;border-radius:12px;padding:19px 23px;background:#122d38;margin:17px 0}.owner strong{display:block;font-size:21px}
+.progress{padding:22px;border:1px solid #466e75;border-radius:14px;background:#102b34}.progress strong{font-size:23px;color:#e9fffa}
+footer{padding:35px 0;border-top:1px solid #2e4c58;text-align:center;font-size:14px;color:#b6c9d0}
+@media(max-width:800px){.hero-grid,.two{grid-template-columns:1fr}.payments{grid-template-columns:1fr 1fr}.hero{padding-top:39px}.poster{max-width:530px;margin:auto}}
+@media(max-width:540px){.payments,.three{grid-template-columns:1fr}nav{align-items:flex-start;flex-direction:column;padding:12px 0;gap:6px}.navlinks{gap:12px}.hero{padding-top:27px}.actions .btn{width:100%}.poster .big{font-size:39px}}
+</style></head>
+<body>
+<header><nav class="wrap"><strong>✦ VOLVER A EMPEZAR</strong><div class="navlinks"><a href="#historia">Mi historia</a><a href="#nucleo">NÚCLEO</a><a href="#colaborar">Colaborar</a></div></nav></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div>
+<span class="eyebrow">Una nueva etapa · Cayetano Raúl Benítez</span>
+<h1>QUIERO <em>VOLVER A EMPEZAR.</em></h1>
+<p>Estoy reuniendo un respaldo para regresar a mi Buenos Aires y reconstruir mi estabilidad. Atravesé situaciones de desgaste y maltrato laboral, pero no quiero detenerme: quiero seguir trabajando, creando y demostrando todo lo que sé hacer.</p>
+<p><strong>Además, estoy desarrollando NÚCLEO:</strong> un software administrativo para PyMEs, comercios y empresas.</p>
+<div class="actions"><a class="btn" href="#colaborar">❤️ COLABORAR VOLUNTARIAMENTE</a><a class="btn secondary" href="#nucleo">CONOCER NÚCLEO ↗</a></div>
+<div class="notice">No te pido que me resuelvas la vida. Te invito, si está dentro de tus posibilidades, a acompañarme mientras construyo una nueva oportunidad.</div>
+</div><div class="poster" role="img" aria-label="Flyer: Estoy creando una aplicación grande para PyMEs, negocios y empresas. Busco sponsor y apoyo para NÚCLEO.">
+<div class="cap">CAYELAB / PROYECTO EN DESARROLLO</div>
+<div class="big">ESTOY CREANDO<br>UNA <b>APLICACIÓN</b><br><b>GRANDE</b></div>
+<div class="cap">PARA PYMES, NEGOCIOS Y EMPRESAS</div>
+<div class="sponsor">🤝 BUSCO SPONSOR / APOYO</div>
+<p>Estoy desarrollando <strong>NÚCLEO</strong>: administración, pagos, proveedores, documentos y control de gestión.</p>
+<p>Ya existe un sistema en desarrollo. Quiero llevarlo a otro nivel con patrocinio, recursos y una comunidad que crea en la innovación.</p>
+<div class="bottom">SUMATE A CONSTRUIR ALGO GRANDE</div>
+<div class="mini">Apoyo voluntario · Más información abajo</div>
+</div></div></section>
+<section id="historia"><div class="wrap"><span class="eyebrow">Mi historia</span><h2>No quiero rendirme. Quiero una oportunidad.</h2><div class="two"><div class="panel"><h3>Por qué quiero volver</h3><p>Vine a Villa La Angostura buscando estabilidad y una nueva etapa. El contexto laboral se volvió difícil para mí. Mi objetivo es reunir recursos para el traslado y los gastos iniciales mientras busco un empleo estable, preferentemente en administración o tecnología.</p></div><div class="panel"><h3>Qué tengo para ofrecer</h3><p>Más de 20 años de trayectoria en gastronomía, administración, coordinación de cajas, proveedores y sistemas de gestión. También desarrollo soluciones digitales, páginas web, automatizaciones y herramientas para negocios.</p><a class="btn secondary" href="https://caye2404.github.io/cayelab-web/">VER CAYELAB ↗</a></div></div></div></section>
+<section id="nucleo"><div class="wrap"><span class="eyebrow">Proyecto tecnológico</span><h2>NÚCLEO: tecnología nacida de problemas reales.</h2><p>Una aplicación administrativa en desarrollo para tener mayor control sobre documentos, proveedores, cuentas corrientes, pagos y reportes. Busco <strong>sponsors y alianzas</strong> que quieran conocer el proyecto y estudiar cómo impulsarlo.</p><div class="three">
+<div class="panel"><h3>📂 Administración</h3><p>Documentos, facturas, vencimientos y cuentas corrientes.</p></div>
+<div class="panel"><h3>💻 Tecnología</h3><p>Desarrollo web, procesos, controles y automatizaciones.</p></div>
+<div class="panel"><h3>🤝 Patrocinio</h3><p>Busco conversaciones concretas con empresas y colaboradores.</p></div></div>
+<div class="actions"><a class="btn" href="https://caye2404.github.io/cayelab-web/nucleo-demo/" target="_blank" rel="noopener">VER DEMO NÚCLEO ↗</a><a class="btn secondary" href="https://caye2404.github.io/todo-vuelve/#nucleo">VER AVANCES ↗</a></div></div></section>
+<section id="colaborar"><div class="wrap"><span class="eyebrow">100 % voluntario</span><h2>Si podés ayudar, gracias de corazón.</h2><p>Estoy recaudando para volver a Buenos Aires y seguir construyendo mis proyectos. Todo aporte es voluntario y no implica compras, inversiones, premios ni beneficios garantizados. Compartir esta historia o acercarme una oportunidad de trabajo también ayuda.</p>
+<div class="owner"><strong>Titular: Cayetano Raúl Benítez</strong><span>CUIT: 20-33083610-6</span><div class="mini">Antes de transferir, verificá en tu aplicación que aparezca el destinatario correcto.</div></div>
+<div class="payments">
+<article class="paycard"><strong>PayPal</strong><small>Aportes desde Argentina o el exterior, según disponibilidad de PayPal.</small><form action="https://www.paypal.com/donate" method="post" target="_blank"><input type="hidden" name="hosted_button_id" value="LC22GZCYF8AH4"><button class="btn paypal" type="submit">DONAR CON PAYPAL ↗</button></form><a href="https://paypal.me/caye2404" target="_blank" rel="noopener" class="mini">PayPal.Me alternativo ↗</a></article>
+<article class="paycard"><strong>AstroPay</strong><small>Billetera virtual</small><div class="alias">caye2404.astro</div><button type="button" class="btn copy" data-alias="caye2404.astro">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+<article class="paycard"><strong>Galicia</strong><small>Transferencia argentina</small><div class="alias">caye2000</div><button type="button" class="btn copy" data-alias="caye2000">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+<article class="paycard"><strong>BBVA</strong><small>Transferencia argentina</small><div class="alias">caye2404b</div><button type="button" class="btn copy" data-alias="caye2404b">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+<article class="paycard"><strong>Ualá</strong><small>Billetera virtual</small><div class="alias">cayuala</div><button type="button" class="btn copy" data-alias="cayuala">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+<article class="paycard"><strong>Banco Nación</strong><small>Transferencia argentina</small><div class="alias">cayenacion</div><button type="button" class="btn copy" data-alias="cayenacion">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+<article class="paycard"><strong>Prex</strong><small>Billetera virtual</small><div class="alias">cayben</div><button type="button" class="btn copy" data-alias="cayben">⧉ COPIAR ALIAS</button><div class="copy-status" aria-live="polite"></div></article>
+</div>
+<div class="progress"><span class="eyebrow">Transparencia</span><br><strong>Recaudación confirmada: <span id="raised">pendiente de verificación</span></strong><p class="mini">Se publicará solo cuando los aportes estén conciliados. Este contador no se actualiza automáticamente desde las billeteras.</p><a class="btn secondary" href="https://caye2404.github.io/todo-vuelve/#avances">VER AVANCES DEL PROYECTO ↗</a></div>
+<p class="mini">Los aportes personales no otorgan derechos sobre NÚCLEO. Las propuestas de patrocinio comercial se conversan por separado.</p>
+</div></section></main>
+<footer><div class="wrap"><strong>VOLVER A EMPEZAR</strong><p>Un proyecto personal de Cayetano Raúl Benítez · CayeLab y NÚCLEO · Buenos Aires / Villa La Angostura</p><a href="https://caye2404.github.io/todo-vuelve/">TODO VUELVE</a></div></footer>
+<script>
+document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",async function(){var a=b.dataset.alias,ok=false;try{await navigator.clipboard.writeText(a);ok=true}catch(e){var t=document.createElement("textarea");t.value=a;document.body.appendChild(t);t.select();try{ok=document.execCommand("copy")}catch(e){}t.remove()}b.nextElementSibling.textContent=ok?"✓ Alias copiado. Verificá el destinatario.":"Copiá manualmente: "+a})});
+fetch("https://caye2404.github.io/todo-vuelve/campana.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{if(typeof d.recaudado_confirmado==="number"&&Number.isFinite(d.recaudado_confirmado)&&d.recaudado_confirmado>=0){document.getElementById("raised").textContent=new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(d.recaudado_confirmado)}}).catch(()=>{});
+</script></body></html>
